@@ -1,7 +1,8 @@
-import 'package:cicadahack/models/survey.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:uuid/uuid.dart';
 import 'package:uuid/uuid_util.dart';
+
+import '../models/survey.dart';
 
 class DatabaseService {
   DatabaseService._();

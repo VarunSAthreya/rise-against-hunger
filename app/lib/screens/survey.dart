@@ -1,10 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:cicadahack/models/survey.dart';
-import 'package:cicadahack/widgets/survey_dropdown.dart';
-import 'package:cicadahack/widgets/survey_textfiled.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+import '../models/survey.dart';
+import '../widgets/survey_dropdown.dart';
+import '../widgets/survey_textfiled.dart';
 import 'maps.dart';
 
 class SurveyPage extends HookWidget {

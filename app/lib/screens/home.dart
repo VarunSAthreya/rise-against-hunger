@@ -1,9 +1,9 @@
-import 'package:cicadahack/screens/survey.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:lottie/lottie.dart';
 
 import '../services/auth.dart';
+import 'survey.dart';
 
 class Home extends HookConsumerWidget {
   static const routeName = '/home';

@@ -9,7 +9,6 @@ import '../services/database.dart';
 import 'home.dart';
 
 class MapsLocation extends StatefulWidget {
-  static const routeName = '/map';
   final Survey survey;
   const MapsLocation({Key? key, required this.survey}) : super(key: key);
 
@@ -104,6 +103,9 @@ class _MapsLocationState extends State<MapsLocation> {
                 widget.survey.location = _currentLatLng;
                 await DatabaseService.addSurvey(survey: widget.survey);
                 Navigator.pushReplacementNamed(context, Home.routeName);
+                setState(() {
+                  _isLoading = false;
+                });
               } catch (e) {
                 debugPrint(e.toString());
               }
