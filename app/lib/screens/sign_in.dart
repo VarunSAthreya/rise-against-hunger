@@ -7,11 +7,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../components/gradient_container.dart';
 import '../services/auth.dart';
 import '../widgets/custom_textfield.dart';
-// import 'forgot_password.dart';
-// import 'home.dart';
-// import 'home.dart';
+import 'home.dart';
 import 'sign_up.dart';
-// import 'verify_screen.dart';
 
 class SignIn extends HookConsumerWidget {
   static const routeName = '/signIn';
@@ -40,11 +37,7 @@ class SignIn extends HookConsumerWidget {
           password: _passwordController.text.trim(),
         );
         if (user != null) {
-          if (user.emailVerified) {
-            // Navigator.pushReplacementNamed(context, HomePage.routeName);
-          } else {
-            // Navigator.pushReplacementNamed(context, VerifyScreen.routeName);
-          }
+          Navigator.pushReplacementNamed(context, Home.routeName);
         }
       } on FirebaseAuthException catch (e) {
         switch (e.code) {
@@ -219,18 +212,18 @@ class SignIn extends HookConsumerWidget {
       );
     }
 
-    Widget _logo(BuildContext context) {
-      return Container(
-        margin: const EdgeInsets.only(top: 30.0, bottom: 20.0),
-        height: MediaQuery.of(context).size.height * 0.2,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/logo.png'),
-            fit: BoxFit.fitWidth,
-          ),
-        ),
-      );
-    }
+    // Widget _logo(BuildContext context) {
+    //   return Container(
+    //     margin: const EdgeInsets.only(top: 30.0, bottom: 20.0),
+    //     height: MediaQuery.of(context).size.height * 0.2,
+    //     decoration: const BoxDecoration(
+    //       image: DecorationImage(
+    //         image: AssetImage('assets/images/logo.png'),
+    //         fit: BoxFit.fitWidth,
+    //       ),
+    //     ),
+    //   );
+    // }
 
     return _isLoading.value
         ? const Center(child: CircularProgressIndicator())
@@ -240,7 +233,6 @@ class SignIn extends HookConsumerWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                    // _logo(context),
                     _greetings(),
                     const SizedBox(height: 20.0),
                     _inputForm(),
