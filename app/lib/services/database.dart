@@ -1,3 +1,4 @@
+import 'package:cicadahack/models/survey.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:uuid/uuid.dart';
 import 'package:uuid/uuid_util.dart';
@@ -32,5 +33,24 @@ class DatabaseService {
     required dynamic value,
   }) async {
     await _usersRef.doc(id).update({key: value});
+  }
+
+  static Future<void> addSurvey({
+    required Survey survey,
+  }) async {
+    final String id = _uuid.v4();
+    await _surveysRef.doc(id).set({
+      'id': id,
+      'adult': survey.adult,
+      'children': survey.children,
+      'male': survey.male,
+      'female': survey.female,
+      'required_food': survey.requiredFood,
+      'situation': survey.situation,
+      'location': GeoPoint(
+        survey.location!.latitude,
+        survey.location!.longitude,
+      )
+    });
   }
 }
