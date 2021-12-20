@@ -244,6 +244,10 @@ class SignIn extends HookConsumerWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
+                    SizedBox(
+                      height: 250,
+                      child: Lottie.asset('assets/lottie/cookingsafe.json'),
+                    ),
                     _greetings(),
                     const SizedBox(height: 20.0),
                     _inputForm(),
