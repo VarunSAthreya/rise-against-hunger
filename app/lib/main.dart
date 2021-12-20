@@ -1,13 +1,13 @@
-import 'package:cicadahack/screens/home.dart';
-import 'package:cicadahack/screens/sign_in.dart';
-import 'package:cicadahack/screens/splash_screen.dart';
-import 'package:cicadahack/services/auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import './routes.dart';
+import 'screens/home.dart';
+import 'screens/sign_in.dart';
+import 'screens/splash_screen.dart';
+import 'services/auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
