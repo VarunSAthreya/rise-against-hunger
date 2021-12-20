@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
 import {
-    Box,
-    Flex,
-    Stack,
-    Heading,
-    Text,
-    Container,
-    Input,
-    Button,
-    SimpleGrid,
     Avatar,
     AvatarGroup,
+    Box,
+    Button,
+    Container,
+    Flex,
+    Heading,
+    Input,
+    SimpleGrid,
+    Stack,
+    Text,
     useBreakpointValue,
 } from '@chakra-ui/react';
-import NavBar from '../components/NavBar/NavBar';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 import Footer from '../components/Footer/Footer';
+import NavBar from '../components/NavBar/NavBar';
 
 const avatars = [
     {
@@ -44,6 +45,18 @@ const Login = () => {
 
     const switchLoginHandler = () => {
         setLogin((prevState) => !prevState);
+    };
+
+    const router = useRouter();
+
+    const handleSubmission = async () => {
+        // if (login) {
+        //     await signUp(name, email, password);
+        //     router.push('/');
+        // } else {
+        //     await signIn(email, password);
+        //     router.push('/');
+        // }
     };
     return (
         <>
@@ -183,7 +196,7 @@ const Login = () => {
                                 {login ? (
                                     <>
                                         <Input
-                                            placeholder="Firstname"
+                                            placeholder="Name"
                                             bg={'gray.100'}
                                             border={0}
                                             color={'gray.500'}
@@ -201,7 +214,7 @@ const Login = () => {
                                             }}
                                         />
                                         <Input
-                                            placeholder="password"
+                                            placeholder="Password"
                                             bg={'gray.100'}
                                             border={0}
                                             color={'gray.500'}
@@ -244,6 +257,7 @@ const Login = () => {
                                         'linear(to-r, red.400,pink.400)',
                                     boxShadow: 'xl',
                                 }}
+                                onClick={handleSubmission}
                             >
                                 {login ? 'SIGN UP' : 'LOGIN'}
                             </Button>
