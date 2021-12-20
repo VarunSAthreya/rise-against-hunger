@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../components/gradient_container.dart';
 import '../services/auth.dart';
@@ -10,13 +11,13 @@ import '../widgets/custom_textfield.dart';
 // import 'home.dart';
 import 'sign_in.dart';
 
-class SignUp extends HookWidget {
+class SignUp extends HookConsumerWidget {
   static const String routeName = '/signUp';
 
   const SignUp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final _nameController = useTextEditingController();
     final _emailController = useTextEditingController();
     final _passwordController = useTextEditingController();
@@ -33,7 +34,7 @@ class SignUp extends HookWidget {
 
     final _isLoading = useState<bool>(false);
 
-    final _auth = useProvider(authProvider);
+    final _auth = ref.watch(authProvider);
 
     Future<void> _signUp(BuildContext context) async {
       try {
