@@ -35,16 +35,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cicada Hack',
       theme: ThemeData(
-        primaryColor: const Color(0xFF0F0230),
+        primaryColor: Colors.white,
         backgroundColor: const Color(0xFFEEEEEE),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         colorScheme: ColorScheme.fromSwatch()
-            .copyWith(secondary: const Color(0xFF361767)),
+            .copyWith(secondary: const Color(0xfffbbf24)),
         textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(primary: const Color(0xFF361767)),
+          style: TextButton.styleFrom(primary: const Color(0xfffbbf24)),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
-          style: OutlinedButton.styleFrom(primary: const Color(0xFF361767)),
+          style: OutlinedButton.styleFrom(primary: const Color(0xfffbbf24)),
         ),
       ),
       debugShowCheckedModeBanner: false,

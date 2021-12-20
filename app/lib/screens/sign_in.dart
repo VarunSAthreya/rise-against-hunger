@@ -14,6 +14,8 @@ import 'sign_up.dart';
 class SignIn extends HookConsumerWidget {
   static const routeName = '/signIn';
 
+  const SignIn({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final _emailController = useTextEditingController();
@@ -230,8 +232,8 @@ class SignIn extends HookConsumerWidget {
         ? GradientContainer(
             child: Center(
               child: SizedBox(
-                height: 100,
-                width: 100,
+                height: 300,
+                width: 300,
                 child: Lottie.asset('assets/lottie/loading.json'),
               ),
             ),
