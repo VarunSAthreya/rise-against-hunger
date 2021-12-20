@@ -41,7 +41,8 @@ class Home extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 50),
                 GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, Survey.routeName),
+                  onTap: () =>
+                      Navigator.pushNamed(context, SurveyPage.routeName),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 57),
