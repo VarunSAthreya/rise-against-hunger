@@ -11,8 +11,9 @@ import {
     IconButton,
     Image,
 } from '@chakra-ui/react';
-import { AiFillHeart } from 'react-icons/ai';
-import { FaPeopleCarry, FaRunning } from 'react-icons/fa';
+import { AiFillHeart, AiFillPhone } from 'react-icons/ai';
+import { ImLocation } from 'react-icons/im';
+import { FaTruckMoving } from 'react-icons/fa';
 import NavBar from '../components/NavBar/NavBar';
 import Carousel from '../components/UI/Carousel/Carousel';
 import Footer from '../components/Footer/Footer';
@@ -20,22 +21,27 @@ import BasicCard from '../components/UI/Card/BasicCard';
 
 const basicCardData = [
     {
-        title: 'worldWide Leaders',
+        title: 'Get in touch',
         description:
-            'The mind and the body are connected. Many mental ailments cause stress, which lowers the immune system. This means more frequent sickness and inability to cope.Stress and anxiety can take a toll on our physical health.',
-        icon: FaRunning,
+            'Donors with surplus food/resources can reach us at -91 90877 90877',
+        icon: AiFillPhone,
     },
     {
-        title: 'Trusted Organization',
+        title: 'Quality check',
         description:
-            'Our mental health affects how we cope with life. Lack of treatment leads to hopelessness and sadness, worthlessness, feeling guilty, anxiety and worry, fear, and loss of control.Our relationships may suffer.',
+            ' Excess Food will be checked based on our Food Safety and Standard Guidelines',
         icon: AiFillHeart,
     },
     {
-        title: '24/7 Expert Advice',
+        title: 'Locate',
         description:
-            'When it comes down to it, those who are mentally ill must need treatment. But without awareness and breaking the stigma surrounding their condition, they won’t feel comfortable reaching out to somebody for help.',
-        icon: FaPeopleCarry,
+            'We spot the nearest “Hunger Spot” which is the most underserved areas',
+        icon: ImLocation,
+    },
+    {
+        title: 'Deliver',
+        description: 'Excess food is distributed to needy people with love.',
+        icon: FaTruckMoving,
     },
 ];
 
@@ -97,23 +103,20 @@ const Home = () => {
                         Welcome
                     </Heading>
                     <Text color={'gray.500'}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus ornare mollis leo, et gravida nulla. Aliquam sed
-                        ligula libero. Cras nec mi augue. Integer accumsan id
-                        eros commodo facilisis.
+                        We’re on the road to end hunger, aligned with the United
+                        Nations Sustainable Goal #2 of Zero Hunger. From the
+                        implementation of sustainable community development
+                        projects to our meal packaging program that harnesses
+                        the passion of local volunteers, we strive to make an
+                        impact on hunger by building resilience,
+                        self-sufficiency and empowerment in communities
+                        worldwide.
                     </Text>
                     <Text color={'gray.500'}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus ornare mollis leo, et gravida nulla. Aliquam sed
-                        ligula libero. Cras nec mi augue. Integer accumsan id
-                        eros commodo facilisis. Nam volutpat, orci in placerat
-                        scelerisque, nisi ipsum feugiat lacus, ac iaculis ex
-                        augue nec nisi. Pellentesque nisi sapien, laoreet vitae
-                        neque lacinia, semper aliquet neque. Curabitur vel mi ac
-                        felis suscipit maximus. Vivamus hendrerit nec sem eget
-                        accumsan. Integer finibus tempus sodales. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Donec sed
-                        elementum ex. Etiam rutrum ornare mauris vel tempus.
+                        No Food Waste is a Not-For-Profit surplus food
+                        management organisation connecting untouched edible
+                        surplus food with needy people for making the World
+                        Hunger Free and Zero Food Waste.
                     </Text>
                 </Stack>
             </Container>
@@ -134,14 +137,15 @@ const Home = () => {
                     Why Choose Our Service ?
                 </Heading>
                 <Text color={'gray.500'}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus ornare mollis leo, et gravida nulla. Aliquam sed
-                    ligula libero. Cras nec mi augue. Integer accumsan id eros
-                    commodo facilisis.
+                    To bring a social change in every individual in-order to
+                    reduce food waste and to make the World Hunger Free. to
+                    provide essential food support to underserved areas in the
+                    form of food or packaged food products depending on the
+                    need. Our goal is to ensure, Feed people not landfills.
                 </Text>
                 <SimpleGrid
                     my={6}
-                    columns={{ base: 1, md: 3 }}
+                    columns={{ base: 1, md: 4 }}
                     spacing={{ base: 5, lg: 8 }}
                 >
                     {basicCardData.map((data, index) => (
