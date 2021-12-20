@@ -58,6 +58,7 @@ class SurveyPage extends HookWidget {
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Container(
+          alignment: Alignment.center,
           width: double.infinity,
           height: double.infinity,
           color: Theme.of(context).colorScheme.secondary,
@@ -132,6 +133,7 @@ class SurveyPage extends HookWidget {
                                   requiredFood: _food.value,
                                   male: _male.value,
                                 ),
+                                isSurvey: true,
                               ),
                             ),
                           );
