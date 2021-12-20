@@ -1,3 +1,4 @@
+import 'package:cicadahack/screens/home.dart';
 import 'package:cicadahack/screens/sign_in.dart';
 import 'package:cicadahack/screens/splash_screen.dart';
 import 'package:cicadahack/services/auth.dart';
@@ -65,7 +66,7 @@ class AuthWrapper extends ConsumerWidget {
     return _authState.when(
       data: (value) {
         return value != null
-            ? const SplashScreen(changeRoute: SignIn.routeName)
+            ? const SplashScreen(changeRoute: Home.routeName)
             : const SplashScreen(changeRoute: SignIn.routeName);
       },
       loading: () {
