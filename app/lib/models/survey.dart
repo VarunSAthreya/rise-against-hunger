@@ -2,17 +2,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Survey {
-  final String id;
+  final String? id;
   final int adult;
   final int children;
   final int male;
   final int female;
   final int requiredFood;
   final String situation;
-  final LatLng? location;
+  LatLng? location;
 
   Survey({
-    required this.id,
+    this.id,
     required this.adult,
     required this.children,
     required this.male,

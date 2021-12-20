@@ -1,12 +1,15 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:cicadahack/models/survey.dart';
 import 'package:cicadahack/widgets/survey_dropdown.dart';
 import 'package:cicadahack/widgets/survey_textfiled.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-class Survey extends HookWidget {
+import 'maps.dart';
+
+class SurveyPage extends HookWidget {
   static const routeName = '/survey';
-  const Survey({Key? key}) : super(key: key);
+  const SurveyPage({Key? key}) : super(key: key);
 
   Hero _title(BuildContext context) {
     return Hero(
@@ -77,7 +80,7 @@ class Survey extends HookWidget {
                         labelText: 'Adilts',
                         title: 'Enter Number of Adults: ',
                         keyboardType: TextInputType.number,
-                        onChanged: (str) => _adults.value = str,
+                        onChanged: (str) => _adults.value = int.parse(str),
                       ),
                       const SizedBox(height: 20),
                       SurveyTextField(
@@ -113,6 +116,44 @@ class Survey extends HookWidget {
                         value: _situation.value,
                         list: const ['Good', 'Normal', 'Severe'],
                         onChanged: (str) => _situation.value = str,
+                      ),
+                      const SizedBox(height: 20),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute<MapsLocation>(
+                              builder: (context) => MapsLocation(
+                                survey: Survey(
+                                  adult: _adults.value,
+                                  children: _children.value,
+                                  situation: _situation.value,
+                                  female: _female.value,
+                                  requiredFood: _food.value,
+                                  male: _male.value,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 10,
+                            horizontal: 80,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.secondary,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            'Select Location',
+                            textScaleFactor: 1.5,
+                            style: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
