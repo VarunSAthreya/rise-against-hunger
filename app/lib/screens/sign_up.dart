@@ -247,21 +247,23 @@ class SignUp extends HookConsumerWidget {
 
     return _isLoading.value
         ? const Center(child: CircularProgressIndicator())
-        : GradientContainer(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _logo(context),
-                  _greetings(),
-                  const SizedBox(height: 20),
-                  _inputForms(),
-                  const SizedBox(height: 10),
-                  _signUpButton(context),
-                  const SizedBox(height: 10),
-                  _signInRoute(context),
-                ],
+        : Scaffold(
+            body: GradientContainer(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _logo(context),
+                    _greetings(),
+                    const SizedBox(height: 20),
+                    _inputForms(),
+                    const SizedBox(height: 10),
+                    _signUpButton(context),
+                    const SizedBox(height: 10),
+                    _signInRoute(context),
+                  ],
+                ),
               ),
             ),
           );

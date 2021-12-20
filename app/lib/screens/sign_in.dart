@@ -240,7 +240,7 @@ class SignIn extends HookConsumerWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                    _logo(context),
+                    // _logo(context),
                     _greetings(),
                     const SizedBox(height: 20.0),
                     _inputForm(),

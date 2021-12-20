@@ -1,8 +1,12 @@
-import 'package:cicadahack/screens/sign_up.dart';
+import 'package:cicadahack/screens/sign_in.dart';
+import 'package:cicadahack/screens/splash_screen.dart';
+import 'package:cicadahack/services/auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import './routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,7 +47,41 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SignUp(),
+      home: AuthWrapper(),
+      routes: routes,
+    );
+  }
+}
+
+class AuthWrapper extends ConsumerWidget {
+  AuthWrapper({Key? key}) : super(key: key);
+
+  final authStateProvider =
+      StreamProvider((ref) => ref.watch(authProvider).authStateChanges);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final _authState = ref.watch(authStateProvider);
+    return _authState.when(
+      data: (value) {
+        return value != null
+            ? const SplashScreen(changeRoute: SignIn.routeName)
+            : const SplashScreen(changeRoute: SignIn.routeName);
+      },
+      loading: () {
+        return const Scaffold(
+          body: Center(
+            child: CircularProgressIndicator(),
+          ),
+        );
+      },
+      error: (_, __) {
+        return const Scaffold(
+          body: Center(
+            child: Text('Unexpected error occurred'),
+          ),
+        );
+      },
     );
   }
 }
