@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:lottie/lottie.dart';
 
 import '../components/gradient_container.dart';
 import '../services/auth.dart';
-import '../widgets/custom_dropdown.dart';
 import '../widgets/custom_textfield.dart';
-// import 'home.dart';
+import 'home.dart';
 import 'sign_in.dart';
 
 class SignUp extends HookConsumerWidget {
@@ -21,8 +21,6 @@ class SignUp extends HookConsumerWidget {
     final _nameController = useTextEditingController();
     final _emailController = useTextEditingController();
     final _passwordController = useTextEditingController();
-
-    final _userType = useState(UserType.noDetail);
 
     final _emailIdErrorMessage = useState<String>('');
     final _passwordErrorMessage = useState<String>('');
@@ -44,10 +42,9 @@ class SignUp extends HookConsumerWidget {
           email: _emailController.text,
           password: _passwordController.text,
           name: _nameController.text,
-          userType: _userType.value,
         );
 
-        // Navigator.pushReplacementNamed(context, HomePage.routeName);
+        Navigator.pushReplacementNamed(context, Home.routeName);
       } on FirebaseAuthException catch (e) {
         switch (e.code) {
           case 'email-already-in-use':
@@ -135,32 +132,7 @@ class SignUp extends HookConsumerWidget {
             iconData: FontAwesomeIcons.lock,
           ),
           const SizedBox(height: 20),
-          CustomDropdown(
-            hint: _userType.value,
-            list: const [
-              UserType.engineering,
-              UserType.admin,
-              UserType.user,
-            ],
-            iconData: FontAwesomeIcons.userAstronaut,
-            onChanged: (String val) {
-              _userType.value = val;
-            },
-          ),
         ],
-      );
-    }
-
-    Widget _logo(BuildContext context) {
-      return Container(
-        margin: const EdgeInsets.only(top: 30.0, bottom: 20.0),
-        height: MediaQuery.of(context).size.height * 0.2,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/logo.png'),
-            fit: BoxFit.fitWidth,
-          ),
-        ),
       );
     }
 
@@ -230,8 +202,7 @@ class SignUp extends HookConsumerWidget {
 
             if (_validityEmail.value &&
                 _validityPassword.value &&
-                _validityName.value &&
-                _userType.value != UserType.noDetail) {
+                _validityName.value) {
               await _signUp(context);
             }
           },
@@ -246,31 +217,33 @@ class SignUp extends HookConsumerWidget {
     }
 
     return _isLoading.value
-        ? const Center(child: CircularProgressIndicator())
-        : GradientContainer(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _logo(context),
-                  _greetings(),
-                  const SizedBox(height: 20),
-                  _inputForms(),
-                  const SizedBox(height: 10),
-                  _signUpButton(context),
-                  const SizedBox(height: 10),
-                  _signInRoute(context),
-                ],
+        ? GradientContainer(
+            child: Center(
+              child: SizedBox(
+                height: 300,
+                width: 300,
+                child: Lottie.asset('assets/lottie/loading.json'),
+              ),
+            ),
+          )
+        : Scaffold(
+            body: GradientContainer(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _greetings(),
+                    const SizedBox(height: 20),
+                    _inputForms(),
+                    const SizedBox(height: 10),
+                    _signUpButton(context),
+                    const SizedBox(height: 10),
+                    _signInRoute(context),
+                  ],
+                ),
               ),
             ),
           );
   }
-}
-
-mixin UserType {
-  static const String noDetail = 'Select User Type';
-  static const String engineering = 'Spot Engineer';
-  static const String admin = 'Dashboard Admin';
-  static const String user = 'End User';
 }
