@@ -1,3 +1,4 @@
+import 'package:cicadahack/screens/survey.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:lottie/lottie.dart';
@@ -40,7 +41,8 @@ class Home extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 50),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () =>
+                      Navigator.pushNamed(context, SurveyPage.routeName),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 57),
@@ -48,12 +50,15 @@ class Home extends HookConsumerWidget {
                       color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text(
-                      'Survey',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold,
+                    child: Hero(
+                      tag: 'Survey',
+                      child: Text(
+                        'Survey',
+                        textScaleFactor: 1.5,
+                        style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
