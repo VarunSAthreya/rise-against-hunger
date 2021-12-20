@@ -16,9 +16,11 @@
         "@chakra-ui/react": "^1.7.2",
         "@emotion/react": "^11.6.0",
         "@emotion/styled": "^11.6.0",
+        "chart.js": "^3.6.2",
         "framer-motion": "^4.1.17",
         "next": "^12.0.5",
         "react": "^17.0.2",
+        "react-chartjs-2": "^4.0.0",
         "react-dom": "^17.0.2",
         "react-icons": "^4.3.1",
         "react-slick": "^0.28.1"
