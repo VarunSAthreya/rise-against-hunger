@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:lottie/lottie.dart';
 
 import '../components/gradient_container.dart';
 import '../services/auth.dart';
 import '../widgets/custom_textfield.dart';
-// import 'home.dart';
 import 'sign_in.dart';
 
 class SignUp extends HookConsumerWidget {
@@ -217,7 +217,15 @@ class SignUp extends HookConsumerWidget {
     }
 
     return _isLoading.value
-        ? const Center(child: CircularProgressIndicator())
+        ? GradientContainer(
+            child: Center(
+              child: SizedBox(
+                height: 100,
+                width: 100,
+                child: Lottie.asset('assets/lottie/loading.json'),
+              ),
+            ),
+          )
         : Scaffold(
             body: GradientContainer(
               child: Padding(
