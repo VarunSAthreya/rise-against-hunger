@@ -78,7 +78,7 @@ class SurveyPage extends HookWidget {
                     children: [
                       _title(context),
                       SurveyTextField(
-                        labelText: 'Adilts',
+                        labelText: 'Adults',
                         title: 'Enter Number of Adults: ',
                         keyboardType: TextInputType.number,
                         onChanged: (str) => _adults.value = int.parse(str),

@@ -34,7 +34,7 @@ class Home extends HookConsumerWidget {
               children: [
                 Lottie.asset('assets/lottie/survey.json'),
                 const Text(
-                  'Choose Your work',
+                  'Choose your deed',
                   textScaleFactor: 2.5,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
