@@ -1,23 +1,22 @@
 import {
-    IconButton,
     Box,
     CloseButton,
-    Flex,
-    Icon,
-    useColorModeValue,
-    Link,
     Drawer,
     DrawerContent,
+    Flex,
+    Icon,
+    IconButton,
+    Link,
     Text,
+    useColorModeValue,
     useDisclosure,
 } from '@chakra-ui/react';
-import { FiHome, FiMenu, FiLogOut } from 'react-icons/fi';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
+import { FiHome, FiMenu } from 'react-icons/fi';
 
 const LinkItems = [
-    { name: 'Home', icon: FiHome },
-    { name: 'Trending', icon: BsFillInfoCircleFill },
-    { name: 'Logout', icon: FiLogOut },
+    { name: 'Dashboard', icon: FiHome },
+    { name: 'Info', icon: BsFillInfoCircleFill },
 ];
 
 const SideBar = ({ children }) => {
@@ -85,7 +84,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
 const NavItem = ({ icon, children, ...rest }) => {
     return (
-        <Link href="#" style={{ textDecoration: 'none' }}>
+        <Link
+            href={children.toString().toLowerCase()}
+            style={{ textDecoration: 'none' }}
+        >
             <Flex
                 align="center"
                 p="4"

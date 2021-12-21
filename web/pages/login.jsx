@@ -90,15 +90,15 @@ const Login = () => {
                                 lg: '6xl',
                             }}
                         >
-                            Senior web designers{' '}
+                            FTW{' '}
                             <Text
                                 as={'span'}
                                 bgGradient="linear(to-r, yellow.400,#ffb24f)"
                                 bgClip="text"
                             >
-                                &
+                                -
                             </Text>{' '}
-                            Full-Stack Developers
+                            Feeding the World
                         </Heading>
                         <Stack direction={'row'} spacing={4} align={'center'}>
                             <AvatarGroup>
@@ -276,7 +276,7 @@ const Login = () => {
                                 }}
                                 onClick={handleSubmission}
                             >
-                                {login ? 'SIGN UP' : 'LOGIN'}
+                                {login ? 'SIGN UP' : 'LOG IN'}
                             </Button>
                             <Button
                                 fontFamily={'heading'}

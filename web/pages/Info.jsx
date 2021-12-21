@@ -1,19 +1,36 @@
-import React from 'react';
 import {
+    Avatar,
     Flex,
     Heading,
-    Avatar,
-    Text,
     Table,
-    Thead,
     Tbody,
-    Tr,
-    Th,
     Td,
+    Text,
+    Th,
+    Thead,
+    Tr,
 } from '@chakra-ui/react';
+import React from 'react';
+import Geocode from 'react-geocode';
 import SideBar from '../components/SideBar/sideBar';
+import firebase from '../lib/firebase';
 
-const Info = () => {
+const Info = ({ donate }) => {
+    const address = [];
+    Geocode.setApiKey(process.env.NEXT_PUBLIC_MAPS_API);
+
+    donate.map((don) => {
+        Geocode.fromLatLng(don.location.latitude, don.location.longitude).then(
+            (response) => {
+                const address1 = response.results[0].formatted_address;
+                address.push(address1);
+            },
+            (error) => {
+                console.error(error);
+            }
+        );
+    });
+
     return (
         <Flex>
             <SideBar />
@@ -24,211 +41,50 @@ const Info = () => {
                     <Table variant="unstyled" mt={4}>
                         <Thead>
                             <Tr color="gray">
-                                <Th>Name of transaction</Th>
-                                <Th>Category</Th>
-                                <Th isNumeric>Cashback</Th>
-                                <Th isNumeric>Amount</Th>
+                                <Th>Name of Donatee</Th>
+                                <Th>Area</Th>
+                                <Th isNumeric>No of People</Th>
+                                <Th isNumeric>Phone Number</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
-                            <Tr>
-                                <Td>
-                                    <Flex align="center">
-                                        <Avatar
-                                            size="sm"
-                                            mr={2}
-                                            src="amazon.jpeg"
-                                        />
-                                        <Flex flexDir="column">
-                                            <Heading
+                            {donate.map((don, index) => (
+                                <Tr key={index}>
+                                    <Td>
+                                        <Flex align="center">
+                                            <Avatar
                                                 size="sm"
-                                                letterSpacing="tight"
-                                            >
-                                                Amazon
-                                            </Heading>
-                                            <Text fontSize="sm" color="gray">
-                                                Apr 24, 2021 at 1:40pm
-                                            </Text>
+                                                mr={2}
+                                                src="amazon.jpeg"
+                                            />
+                                            <Flex flexDir="column">
+                                                <Heading
+                                                    size="sm"
+                                                    letterSpacing="tight"
+                                                >
+                                                    {don.name}
+                                                </Heading>
+                                                <Text
+                                                    fontSize="sm"
+                                                    color="gray"
+                                                >
+                                                    Apr 24, 2021 at 1:40pm
+                                                </Text>
+                                            </Flex>
                                         </Flex>
-                                    </Flex>
-                                </Td>
-                                <Td>Electronic Devices</Td>
-                                <Td isNumeric>+$2</Td>
-                                <Td isNumeric>
-                                    <Text
-                                        fontWeight="bold"
-                                        display="inline-table"
-                                    >
-                                        -$242
-                                    </Text>
-                                    .00
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>
-                                    <Flex align="center">
-                                        <Avatar
-                                            size="sm"
-                                            mr={2}
-                                            src="starbucks.png"
-                                        />
-                                        <Flex flexDir="column">
-                                            <Heading
-                                                size="sm"
-                                                letterSpacing="tight"
-                                            >
-                                                Starbucks
-                                            </Heading>
-                                            <Text fontSize="sm" color="gray">
-                                                Apr 22, 2021 at 2:43pm
-                                            </Text>
-                                        </Flex>
-                                    </Flex>
-                                </Td>
-                                <Td>Cafe and restaurant</Td>
-                                <Td isNumeric>+$23</Td>
-                                <Td isNumeric>
-                                    <Text
-                                        fontWeight="bold"
-                                        display="inline-table"
-                                    >
-                                        -$32
-                                    </Text>
-                                    .00
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>
-                                    <Flex align="center">
-                                        <Avatar
-                                            size="sm"
-                                            mr={2}
-                                            src="youtube.png"
-                                        />
-                                        <Flex flexDir="column">
-                                            <Heading
-                                                size="sm"
-                                                letterSpacing="tight"
-                                            >
-                                                YouTube
-                                            </Heading>
-                                            <Text fontSize="sm" color="gray">
-                                                Apr 13, 2021 at 11:23am
-                                            </Text>
-                                        </Flex>
-                                    </Flex>
-                                </Td>
-                                <Td>Social Media</Td>
-                                <Td isNumeric>+$4</Td>
-                                <Td isNumeric>
-                                    <Text
-                                        fontWeight="bold"
-                                        display="inline-table"
-                                    >
-                                        -$112
-                                    </Text>
-                                    .00
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>
-                                    <Flex align="center">
-                                        <Avatar
-                                            size="sm"
-                                            mr={2}
-                                            src="amazon.jpeg"
-                                        />
-                                        <Flex flexDir="column">
-                                            <Heading
-                                                size="sm"
-                                                letterSpacing="tight"
-                                            >
-                                                Amazon
-                                            </Heading>
-                                            <Text fontSize="sm" color="gray">
-                                                Apr 12, 2021 at 9:40pm
-                                            </Text>
-                                        </Flex>
-                                    </Flex>
-                                </Td>
-                                <Td>Electronic Devices</Td>
-                                <Td isNumeric>+$2</Td>
-                                <Td isNumeric>
-                                    <Text
-                                        fontWeight="bold"
-                                        display="inline-table"
-                                    >
-                                        -$242
-                                    </Text>
-                                    .00
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>
-                                    <Flex align="center">
-                                        <Avatar
-                                            size="sm"
-                                            mr={2}
-                                            src="starbucks.png"
-                                        />
-                                        <Flex flexDir="column">
-                                            <Heading
-                                                size="sm"
-                                                letterSpacing="tight"
-                                            >
-                                                Starbucks
-                                            </Heading>
-                                            <Text fontSize="sm" color="gray">
-                                                Apr 10, 2021 at 2:10pm
-                                            </Text>
-                                        </Flex>
-                                    </Flex>
-                                </Td>
-                                <Td>Cafe and restaurant</Td>
-                                <Td isNumeric>+$23</Td>
-                                <Td isNumeric>
-                                    <Text
-                                        fontWeight="bold"
-                                        display="inline-table"
-                                    >
-                                        -$32
-                                    </Text>
-                                    .00
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>
-                                    <Flex align="center">
-                                        <Avatar
-                                            size="sm"
-                                            mr={2}
-                                            src="youtube.png"
-                                        />
-                                        <Flex flexDir="column">
-                                            <Heading
-                                                size="sm"
-                                                letterSpacing="tight"
-                                            >
-                                                YouTube
-                                            </Heading>
-                                            <Text fontSize="sm" color="gray">
-                                                Apr 7, 2021 at 9:03am
-                                            </Text>
-                                        </Flex>
-                                    </Flex>
-                                </Td>
-                                <Td>Social Media</Td>
-                                <Td isNumeric>+$4</Td>
-                                <Td isNumeric>
-                                    <Text
-                                        fontWeight="bold"
-                                        display="inline-table"
-                                    >
-                                        -$112
-                                    </Text>
-                                    .00
-                                </Td>
-                            </Tr>
+                                    </Td>
+                                    <Td>{'Hebbal'}</Td>
+                                    <Td isNumeric>{don.people}</Td>
+                                    <Td isNumeric>
+                                        <Text
+                                            fontWeight="bold"
+                                            display="inline-table"
+                                        >
+                                            {don.phnumber}
+                                        </Text>
+                                    </Td>
+                                </Tr>
+                            ))}
                         </Tbody>
                     </Table>
                 </Flex>
@@ -238,3 +94,18 @@ const Info = () => {
 };
 
 export default Info;
+
+export async function getServerSideProps(context) {
+    const querySnapshot = await firebase.firestore().collection('donate').get();
+    const donate = [];
+    querySnapshot.forEach((doc) => {
+        const temp = JSON.stringify(doc.data());
+
+        donate.push(JSON.parse(temp));
+    });
+    return {
+        props: {
+            donate,
+        },
+    };
+}
