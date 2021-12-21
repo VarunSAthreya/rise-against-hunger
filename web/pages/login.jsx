@@ -70,7 +70,7 @@ const Login = () => {
                             Senior web designers{' '}
                             <Text
                                 as={'span'}
-                                bgGradient="linear(to-r, red.400,pink.400)"
+                                bgGradient="linear(to-r, yellow.400,#ffb24f)"
                                 bgClip="text"
                             >
                                 &
@@ -97,7 +97,7 @@ const Login = () => {
                                             rounded: 'full',
                                             transform: 'scale(1.125)',
                                             bgGradient:
-                                                'linear(to-bl, red.400,pink.400)',
+                                                'linear(to-bl, yellow.400,#ffb24f)',
                                             position: 'absolute',
                                             zIndex: -1,
                                             top: 0,
@@ -136,7 +136,7 @@ const Login = () => {
                                     rounded: 'full',
                                     transform: 'scale(1.125)',
                                     bgGradient:
-                                        'linear(to-bl, orange.400,yellow.400)',
+                                        'linear(to-bl, yellow.400,#ffb24f)',
                                     position: 'absolute',
                                     zIndex: -1,
                                     top: 0,
@@ -163,7 +163,7 @@ const Login = () => {
                                 Join our Organization
                                 <Text
                                     as={'span'}
-                                    bgGradient="linear(to-r, red.400,pink.400)"
+                                    bgGradient="linear(to-r, red.400,#ffb24f)"
                                     bgClip="text"
                                 >
                                     !
@@ -237,11 +237,11 @@ const Login = () => {
                                 fontFamily={'heading'}
                                 mt={8}
                                 w={'full'}
-                                bgGradient="linear(to-r, red.400,pink.400)"
+                                bgGradient="linear(to-r, red.400,#ffb24f)"
                                 color={'white'}
                                 _hover={{
                                     bgGradient:
-                                        'linear(to-r, red.400,pink.400)',
+                                        'linear(to-r, yellow.400,#ffb24f)',
                                     boxShadow: 'xl',
                                 }}
                             >
@@ -251,11 +251,11 @@ const Login = () => {
                                 fontFamily={'heading'}
                                 mt={4}
                                 w={'full'}
-                                bgGradient="linear(to-r, red.400,pink.400)"
+                                bgGradient="linear(to-r, red.400,#ffb24f)"
                                 color={'white'}
                                 _hover={{
                                     bgGradient:
-                                        'linear(to-r, red.400,pink.400)',
+                                        'linear(to-r, yellow.400,#ffb24f)',
                                     boxShadow: 'xl',
                                 }}
                                 onClick={switchLoginHandler}
