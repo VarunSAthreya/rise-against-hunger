@@ -13,6 +13,7 @@ import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import SocialMedia from '../UI/Card/SocialMedia';
+import Logo from '../UI/Logo/Logo';
 
 const Footer = () => {
     const varun = [
@@ -94,7 +95,7 @@ const Footer = () => {
                             ml: 8,
                         }}
                     >
-                        LOGO
+                        <Logo />
                     </Flex>
                 </Box>
                 <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>

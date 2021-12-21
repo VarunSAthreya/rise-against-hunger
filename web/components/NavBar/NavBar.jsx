@@ -7,12 +7,12 @@ import {
     Stack,
     useColorMode,
     IconButton,
-    Text,
     HStack,
 } from '@chakra-ui/react';
 import {} from '@chakra-ui/icons';
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NavLink from './NavLink/NavLink';
+import Logo from '../UI/Logo/Logo';
 
 const NavBar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -37,13 +37,14 @@ const NavBar = () => {
                 >
                     <IconButton
                         size={'md'}
+                        _focus={{ outline: 'none' }}
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                         aria-label={'Open Menu'}
                         display={{ md: 'none' }}
                         onClick={isOpen ? onClose : onOpen}
                     />
                     <HStack spacing={8} alignItems={'center'}>
-                        <Text>LOGO</Text>
+                        <Logo />
                     </HStack>
 
                     <Flex alignItems={'center'}>

@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
 import { FiHome, FiMenu } from 'react-icons/fi';
+import Logo from '../UI/Logo/Logo';
 
 const LinkItems = [
     { name: 'Dashboard', icon: FiHome },
@@ -138,14 +139,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                 icon={<FiMenu />}
             />
 
-            <Text
-                fontSize="2xl"
-                ml="8"
-                fontFamily="monospace"
-                fontWeight="bold"
-            >
-                Logo
-            </Text>
+            <Logo />
         </Flex>
     );
 };
