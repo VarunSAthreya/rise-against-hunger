@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Box,
     Heading,
@@ -18,6 +18,8 @@ import NavBar from '../components/NavBar/NavBar';
 import Carousel from '../components/UI/Carousel/Carousel';
 import Footer from '../components/Footer/Footer';
 import BasicCard from '../components/UI/Card/BasicCard';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const basicCardData = [
     {
@@ -80,18 +82,49 @@ const stats = [
     },
 ];
 
+const MotionStack = motion(Stack);
+const slideVariants = {
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 1,
+            ease: 'easeInOut',
+        },
+    },
+    hidden: { opacity: 0, x: 100 },
+};
+const fadeVariants = {
+    visible: {
+        opacity: 1,
+        transition: { duration: 0.5, ease: 'easeInOut', delay: 1.5 },
+    },
+    hidden: { opacity: 0 },
+};
+
 const Home = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
     return (
         <>
             <NavBar />
             <Carousel />
             {/*Welcome*/}
             <Container maxW={'7xl'}>
-                <Stack
+                <MotionStack
                     as={Box}
+                    ref={ref}
+                    animate={controls}
+                    initial="hidden"
+                    variants={slideVariants}
                     textAlign={'center'}
                     spacing={{ base: 4 }}
-                    py={{ base: 20, md: 28 }}
+                    py={{ base: 20, md: 32 }}
                 >
                     <Heading
                         fontWeight={600}
@@ -115,10 +148,15 @@ const Home = () => {
                         surplus food with needy people for making the World
                         Hunger Free and Zero Food Waste.
                     </Text>
-                </Stack>
+                </MotionStack>
             </Container>
             {/*Why Choose Us*/}
-            <Box
+            <MotionStack
+                as={Box}
+                ref={ref}
+                animate={controls}
+                initial="hidden"
+                variants={fadeVariants}
                 maxW="6xl"
                 mx={'auto'}
                 textAlign={'center'}
@@ -149,7 +187,7 @@ const Home = () => {
                         <BasicCard data={data} key={index} />
                     ))}
                 </SimpleGrid>
-            </Box>
+            </MotionStack>
             {/*Mission*/}
             <Box bg={'#ffbf24'} position={'relative'}>
                 <Container maxW={'7xl'} zIndex={10} position={'relative'}>
