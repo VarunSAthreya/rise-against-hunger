@@ -4,10 +4,10 @@ import { Chart as ChartJS } from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
 
 const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['Adults', 'Children', 'Male', 'Female'],
     datasets: [
         {
-            label: 'People Using Our Application',
+            label: 'People fed by us.',
             data: [12, 19, 3, 5, 2, 3],
         },
     ],

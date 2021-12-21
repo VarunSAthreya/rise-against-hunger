@@ -95,7 +95,7 @@ const Info = ({ donate }) => {
 
 export default Info;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
     const querySnapshot = await firebase.firestore().collection('donate').get();
     const donate = [];
     querySnapshot.forEach((doc) => {
