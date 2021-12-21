@@ -90,7 +90,7 @@ const Login = () => {
                                 lg: '6xl',
                             }}
                         >
-                            FTW{' '}
+                            RAH{' '}
                             <Text
                                 as={'span'}
                                 bgGradient="linear(to-r, yellow.400,#ffb24f)"
@@ -98,7 +98,7 @@ const Login = () => {
                             >
                                 -
                             </Text>{' '}
-                            Members Of Feeding the World
+                            Members Of Raise Against Hunger
                         </Heading>
                         <Stack direction={'row'} spacing={4} align={'center'}>
                             <AvatarGroup>
