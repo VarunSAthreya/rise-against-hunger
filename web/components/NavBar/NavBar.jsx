@@ -18,7 +18,7 @@ const NavBar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
 
-    const Links = ['Home', 'Vision', 'About', 'Login'];
+    const Links = ['About', 'Login'];
     return (
         <>
             <Box

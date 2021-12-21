@@ -11,11 +11,13 @@ import {
     Text,
     useDisclosure,
 } from '@chakra-ui/react';
-import { FiHome, FiTrendingUp, FiMenu } from 'react-icons/fi';
+import { FiHome, FiMenu, FiLogOut } from 'react-icons/fi';
+import { BsFillInfoCircleFill } from 'react-icons/bs';
 
 const LinkItems = [
     { name: 'Home', icon: FiHome },
-    { name: 'Trending', icon: FiTrendingUp },
+    { name: 'Trending', icon: BsFillInfoCircleFill },
+    { name: 'Logout', icon: FiLogOut },
 ];
 
 const SideBar = ({ children }) => {
@@ -92,7 +94,7 @@ const NavItem = ({ icon, children, ...rest }) => {
                 role="group"
                 cursor="pointer"
                 _hover={{
-                    bg: 'cyan.400',
+                    bg: '#ffb24f',
                     color: 'white',
                 }}
                 {...rest}

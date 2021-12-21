@@ -19,7 +19,7 @@ const NavLink = ({ children }) => (
                 width: 0,
                 height: '2px',
                 transition: 'width 0.3s ease 0s,left 0.3s ease 0s',
-                background: 'none repeat scroll 0 0 red',
+                background: 'none repeat scroll 0 0 #ffbf24',
             },
             ':hover::after': {
                 width: '100%',
