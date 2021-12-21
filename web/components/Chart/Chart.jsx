@@ -11,7 +11,7 @@ const data = {
             fill: false,
             lineTension: 0.5,
             backgroundColor: '#db86b2',
-            borderColor: '#B57295',
+            borderColor: '#ffb24f',
             borderCapStyle: 'butt',
             borderDashOffset: 0.0,
             borderJoinStyle: '#B57295',
@@ -24,7 +24,7 @@ const data = {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [1000, 1500, 300, 700],
+            data: [0, 700, 400, 800, 1000, 900, 1500],
         },
     ],
 };
@@ -41,7 +41,6 @@ const options = {
             grid: {
                 borderDash: [3, 3],
             },
-            // beginAtZero: true, // this works
         },
     },
     plugins: {

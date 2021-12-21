@@ -32,17 +32,17 @@ const Carousel = () => {
         {
             title: 'FEED THE WORLD',
             text: 'FEED THE WORLD is growing a global movement to end hunger by empowering communities, nourishing lives and responding to emergencies..',
-            image: 'https://image.shutterstock.com/image-photo/-260nw-1435184765.jpg',
+            image: '',
         },
         {
             title: 'FIGHT AGAINST HUNGER',
             text: 'Support our food bank to help the needy in the community',
-            image: 'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
+            image: '',
         },
         {
             title: 'Donate for #ZeroHunger',
             text: ' If you cant feed a hundred people, then feed just one',
-            image: 'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+            image: '',
         },
     ];
 
@@ -101,6 +101,7 @@ const Carousel = () => {
                         {/* This is the block you need to change, to customize the caption */}
                         <Container
                             size="container.lg"
+                            maxW={'100ch'}
                             height="600px"
                             position="relative"
                         >

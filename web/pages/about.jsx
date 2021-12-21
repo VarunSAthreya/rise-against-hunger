@@ -10,10 +10,9 @@ import {
     Text,
 } from '@chakra-ui/react';
 import React from 'react';
-import { AiFillRead } from 'react-icons/ai';
+import { FaHandHoldingHeart, FaLaughBeam } from 'react-icons/fa';
 import { BsFillPeopleFill } from 'react-icons/bs';
-import { FaBrain } from 'react-icons/fa';
-import { MdHearing } from 'react-icons/md';
+import { GiInjustice } from 'react-icons/gi';
 import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
 import TestimonialCard from '../components/UI/Card/TestimonialCard';
@@ -23,7 +22,7 @@ const testimonialCardData = [
         heading: 'Efficient Collaborating',
         review: 'The people providing the service and technology used is very good and have good collaboration.',
         name: 'Guy Hawkins',
-        designation: 'Designer',
+        designation: 'TrustWell Organization Head',
         imageUrl:
             'http://webdesign-finder.com/psycheco-psychology/wp-content/uploads/2021/06/img50.jpg',
     },
@@ -31,7 +30,7 @@ const testimonialCardData = [
         heading: 'Good Service',
         review: 'The service provided by the doctors is very good and they have very good knowledge.',
         name: 'Alec Buttons',
-        designation: 'Software Engineer',
+        designation: 'Lets Feed Organization Head',
         imageUrl:
             'https://matar-elementor.42theme.com/wp-content/uploads/2020/05/close-up-cheerful-older-man-standing-isolated-on-w-Z7MW6Q8.jpg',
     },
@@ -39,7 +38,7 @@ const testimonialCardData = [
         heading: 'Friendly Nature',
         review: 'The Doctors are very friendly and understand the problem very quickly.',
         name: 'Kira Rhoades',
-        designation: 'CEO',
+        designation: 'No Hungry Organization Head',
         imageUrl:
             'https://matar-elementor.42theme.com/wp-content/uploads/2020/05/beautiful-young-woman-standing-outdoors-PDP7Q6B-1.jpg',
     },
@@ -60,7 +59,7 @@ const About = () => {
                             rounded={'md'}
                             alt={'feature image'}
                             src={
-                                'https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                                'https://d1m6300l53o0vp.cloudfront.net/wp-content/uploads/2019/11/FoodBank_IMG_5469-1246x700.jpg'
                             }
                             objectFit={'cover'}
                         />
@@ -68,7 +67,7 @@ const About = () => {
                     <Stack spacing={4}>
                         <Text
                             textTransform={'uppercase'}
-                            color={'#521262'}
+                            color={'#ffbf24'}
                             fontWeight={600}
                             fontSize={'sm'}
                             p={2}
@@ -81,24 +80,21 @@ const About = () => {
                             Who We Are And What We Do
                         </Heading>
                         <Text color={'gray.500'} fontSize={'lg'}>
-                            Donec et odio pellentesque diam volutpat. Quis vel
-                            eros donec ac odio. Adipiscing elit duis tristique
-                            sollicitudin nibh sit. Molestie ac feugiat sed
-                            lectus vestibulum mattis ullamcorper velit sed. Arcu
-                            vitae elementum curabitur vitae nunc sed velit
-                            dignissim. Volutpat diam ut venenatis tellus in.
+                            We are a non Profitable Organization,determined to
+                            end hungry and provide nutritious food to everyone
+                            and raise the importance of a proper diet.
                         </Text>
                         <Text color={'gray.500'} fontSize={'lg'}>
-                            Donec et odio pellentesque diam volutpat. Quis vel
-                            eros donec ac odio. Adipiscing elit duis tristique
-                            sollicitudin nibh sit. Molestie ac feugiat sed
-                            lectus vestibulum mattis ullamcorper velit sed.
+                            We support a nationwide network of food banks and
+                            together we provide emergency food and support to
+                            people locked in poverty, and campaign for change to
+                            end the need for food banks in the UK.
                         </Text>
                     </Stack>
                 </SimpleGrid>
                 <Box p={4} spacing={8}>
                     <Heading textAlign={'center'} mb={4}>
-                        Credentials
+                        Our Values
                     </Heading>
                     <SimpleGrid
                         columns={{ base: 1, md: 4 }}
@@ -113,15 +109,18 @@ const About = () => {
                                 justify={'center'}
                                 color={'white'}
                                 rounded={'full'}
-                                bg={'#521262'}
+                                bg={'#ffbf24'}
                                 mb={1}
                             >
-                                <Icon as={AiFillRead} w={10} h={10} />
+                                <Icon as={FaHandHoldingHeart} w={10} h={10} />
                             </Flex>
-                            <Text fontWeight={600}>Higher degrees</Text>
+                            <Text fontWeight={600}>Compassion</Text>
                             <Text color={'gray.600'} textAlign={'center'}>
-                                Maecenas nec mi in est maximus fermentum.
-                                Suspendisse tempus.
+                                We stand in solidarity with people that need the
+                                help of food banks. We put the wellbeing of
+                                people served by food banks above everything
+                                else. We always uphold and protect their
+                                dignity.
                             </Text>
                         </Stack>
                         <Stack alignItems={'center'} my={4}>
@@ -132,15 +131,17 @@ const About = () => {
                                 justify={'center'}
                                 color={'white'}
                                 rounded={'full'}
-                                bg={'#521262'}
+                                bg={'#ffb24f'}
                                 mb={1}
                             >
-                                <Icon as={FaBrain} w={10} h={10} />
+                                <Icon as={GiInjustice} w={10} h={10} />
                             </Flex>
-                            <Text fontWeight={600}>Methodology</Text>
+                            <Text fontWeight={600}>Justice</Text>
                             <Text color={'gray.600'} textAlign={'center'}>
-                                Maecenas nec mi in est maximus fermentum.
-                                Suspendisse tempus.
+                                We are motivated by a desire to see a more just
+                                society. It’s not right that anyone is facing
+                                hunger and poverty. Everyone should have enough
+                                income to afford the essentials.
                             </Text>
                         </Stack>
                         <Stack alignItems={'center'} my={4}>
@@ -151,15 +152,17 @@ const About = () => {
                                 justify={'center'}
                                 color={'white'}
                                 rounded={'full'}
-                                bg={'#521262'}
+                                bg={'#ffb24f'}
                                 mb={1}
                             >
                                 <Icon as={BsFillPeopleFill} w={10} h={10} />
                             </Flex>
-                            <Text fontWeight={600}>Professionals</Text>
+                            <Text fontWeight={600}>Community</Text>
                             <Text color={'gray.600'} textAlign={'center'}>
-                                Maecenas nec mi in est maximus fermentum.
-                                Suspendisse tempus.
+                                We believe we share the responsibility to
+                                support one another in our communities. To
+                                create change, we must work together for a
+                                fairer society.
                             </Text>
                         </Stack>
                         <Stack alignItems={'center'} my={4}>
@@ -170,15 +173,17 @@ const About = () => {
                                 justify={'center'}
                                 color={'white'}
                                 rounded={'full'}
-                                bg={'#521262'}
+                                bg={'#ffb24f'}
                                 mb={1}
                             >
-                                <Icon as={MdHearing} w={10} h={10} />
+                                <Icon as={FaLaughBeam} w={10} h={10} />
                             </Flex>
-                            <Text fontWeight={600}>Therapy</Text>
+                            <Text fontWeight={600}>Dignity</Text>
                             <Text color={'gray.600'} textAlign={'center'}>
-                                Maecenas nec mi in est maximus fermentum.
-                                Suspendisse tempus.
+                                We recognise the innate value of each individual
+                                person and seek to prioritise the other person’s
+                                needs and concerns in the spirit of mutuality
+                                and friendship. Regardless of background.
                             </Text>
                         </Stack>
                     </SimpleGrid>
@@ -186,8 +191,9 @@ const About = () => {
                 <Stack spacing={6} align={'center'} py={{ base: 20 }}>
                     <Heading>What Our Clients Say</Heading>
                     <Text color={'gray.500'}>
-                        We have been working with clients around the world and
-                        Here are the few things they say about us.
+                        We have been working with other non-profitable
+                        organizations around the world and Here are the few
+                        things they say about us.
                     </Text>
                     <Stack
                         direction={{ base: 'column', md: 'row' }}

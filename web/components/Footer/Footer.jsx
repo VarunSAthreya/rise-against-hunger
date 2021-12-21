@@ -11,32 +11,58 @@ import {
 } from '@chakra-ui/react';
 import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import SocialMedia from '../UI/Card/SocialMedia';
 
 const Footer = () => {
-    // const varun: ISocialMedia[] = [
-    //     {
-    //         icon: BsGithub,
-    //         url: 'https://github.com/VarunSAthreya',
-    //         text: 'GitHub',
-    //     },
-    //     {
-    //         icon: BsLinkedin,
-    //         url: 'https://www.linkedin.com/in/varunsathreya/',
-    //         text: 'LinkedIn',
-    //     },
-    // ];
-    // const sandeep: ISocialMedia[] = [
-    //     {
-    //         icon: BsGithub,
-    //         url: 'https://github.com/Sandeep-M23',
-    //         text: 'GitHub',
-    //     },
-    //     {
-    //         icon: BsLinkedin,
-    //         url: 'https://www.linkedin.com/in/sandeep-m-4a599a1a4/',
-    //         text: 'LinkedIn',
-    //     },
-    // ];
+    const varun = [
+        {
+            icon: BsGithub,
+            url: 'https://github.com/VarunSAthreya',
+            text: 'GitHub',
+        },
+        {
+            icon: BsLinkedin,
+            url: 'https://www.linkedin.com/in/varunsathreya/',
+            text: 'LinkedIn',
+        },
+    ];
+    const sandeep = [
+        {
+            icon: BsGithub,
+            url: 'https://github.com/Sandeep-M23',
+            text: 'GitHub',
+        },
+        {
+            icon: BsLinkedin,
+            url: 'https://www.linkedin.com/in/sandeep-m-4a599a1a4/',
+            text: 'LinkedIn',
+        },
+    ];
+    const sagar = [
+        {
+            icon: BsGithub,
+            url: 'https://github.com/Sandeep-M23',
+            text: 'GitHub',
+        },
+        {
+            icon: BsLinkedin,
+            url: 'https://www.linkedin.com/in/sandeep-m-4a599a1a4/',
+            text: 'LinkedIn',
+        },
+    ];
+    const shithin = [
+        {
+            icon: BsGithub,
+            url: 'https://github.com/Sandeep-M23',
+            text: 'GitHub',
+        },
+        {
+            icon: BsLinkedin,
+            url: 'https://www.linkedin.com/in/sandeep-m-4a599a1a4/',
+            text: 'LinkedIn',
+        },
+    ];
 
     return (
         <Box
@@ -76,11 +102,11 @@ const Footer = () => {
                         <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
                             Services
                         </Text>
-                        <Text>tecx</Text>
-                        <Text>Ind</Text>
-                        <Text>dcidvjd</Text>
-                        <Text>C</Text>
-                        <Text>Anti</Text>
+                        <Text>Additional Support</Text>
+                        <Text>Research & Advocacy</Text>
+                        <Text>Real Stories</Text>
+                        <Text>Charity Retail</Text>
+                        <Text>Emergency Food</Text>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
@@ -91,7 +117,7 @@ const Footer = () => {
                             display="flex"
                             alignItems="center"
                             _hover={{
-                                color: '#521262',
+                                color: '#ffb24f',
                             }}
                         >
                             <Icon boxSize={5} m={{ base: 2 }} as={MdPhone} />
@@ -103,7 +129,7 @@ const Footer = () => {
                                     textDecoration: 'none',
                                 }}
                             >
-                                +91 80 8861 1802
+                                +91 80 8751 1913
                             </Link>
                         </Text>
                         <Text
@@ -111,7 +137,7 @@ const Footer = () => {
                             display="flex"
                             alignItems="center"
                             _hover={{
-                                color: '#521262',
+                                color: '#ffb24f',
                             }}
                         >
                             <Icon boxSize={5} m={{ base: 2 }} as={MdEmail} />
@@ -148,7 +174,7 @@ const Footer = () => {
                             display="flex"
                             alignItems="center"
                             _hover={{
-                                color: '#521262',
+                                color: '#ffb24f',
                                 textDecoration: 'none',
                             }}
                         >
@@ -169,7 +195,7 @@ const Footer = () => {
                             display="flex"
                             alignItems="center"
                             _hover={{
-                                color: '#521262',
+                                color: '#ffb24f',
                             }}
                         >
                             <Icon
@@ -193,7 +219,7 @@ const Footer = () => {
                             display="flex"
                             alignItems="center"
                             _hover={{
-                                color: '#521262',
+                                color: '#ffb24f',
                             }}
                         >
                             <Icon boxSize={5} m={{ base: 2 }} as={BsTwitter} />
@@ -213,7 +239,7 @@ const Footer = () => {
                             display="flex"
                             alignItems="center"
                             _hover={{
-                                color: '#521262',
+                                color: '#ffb24f',
                             }}
                         >
                             <Icon boxSize={5} m={{ base: 2 }} as={BsYoutube} />
@@ -229,23 +255,45 @@ const Footer = () => {
                             </Link>
                         </Text>
                     </Stack>
-                    {/* <Stack align={'flex-start'}>
+                    <Stack align={'flex-start'}>
                         <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
                             Designed And Developed By:
                         </Text>
-                        <Text fontWeight={'500'} fontSize={'md'} mb={2}>
-                            Varun S Athreya
-                        </Text>
-                        {varun.map((data, index) => (
-                            <SocialMedia data={data} key={index} />
-                        ))}
-                        <Text fontWeight={'500'} fontSize={'md'} mb={2}>
-                            Sandeep M
-                        </Text>
-                        {sandeep.map((data, index) => (
-                            <SocialMedia data={data} key={index} />
-                        ))}
-                    </Stack> */}
+                        <SimpleGrid columns={{ base: 2 }} spacing={3}>
+                            <Box>
+                                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
+                                    Varun S Athreya
+                                </Text>
+                                {varun.map((data, index) => (
+                                    <SocialMedia data={data} key={index} />
+                                ))}
+                            </Box>
+                            <Box>
+                                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
+                                    Sandeep M
+                                </Text>
+                                {sandeep.map((data, index) => (
+                                    <SocialMedia data={data} key={index} />
+                                ))}
+                            </Box>
+                            <Box>
+                                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
+                                    Sagar D
+                                </Text>
+                                {sagar.map((data, index) => (
+                                    <SocialMedia data={data} key={index} />
+                                ))}
+                            </Box>
+                            <Box>
+                                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
+                                    Shithin Shetty
+                                </Text>
+                                {shithin.map((data, index) => (
+                                    <SocialMedia data={data} key={index} />
+                                ))}
+                            </Box>
+                        </SimpleGrid>
+                    </Stack>
                 </SimpleGrid>
             </Container>
         </Box>
