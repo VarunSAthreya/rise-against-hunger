@@ -36,7 +36,7 @@ const dashboard = ({ survey }) => {
     };
     return (
         <Flex
-            h={[null, null, '100vh']}
+            h={'auto'}
             maxW="3000px"
             flexDir={['column', 'column', 'row']}
             overflow="hidden"
@@ -53,15 +53,21 @@ const dashboard = ({ survey }) => {
                     Our Distribution
                 </Text>
                 <Chart data={data} />
-            </Flex>
-            <Flex w={'100%'} p="3%" flexDir="column" overflow="auto">
-                <Heading mb={4} letterSpacing="tight" fontWeight={'bold'}>
-                    How Many People We Help
-                </Heading>
-                <Text color="gray" fontSize="sm">
-                    People
-                </Text>
-                <BarChart />
+                <Flex
+                    w={'100%'}
+                    p="3%"
+                    flexDir="column"
+                    overflow="auto"
+                    marginTop={'20px'}
+                >
+                    <Heading mb={4} letterSpacing="tight" fontWeight={'bold'}>
+                        How Many People We Help
+                    </Heading>
+                    <Text color="gray" fontSize="sm">
+                        People
+                    </Text>
+                    <BarChart />
+                </Flex>
             </Flex>
         </Flex>
     );
