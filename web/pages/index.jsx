@@ -60,7 +60,7 @@ const stats = [
         content: <>To End Food Insecurity in All Forms in the World.</>,
     },
     {
-        title: 'Vision',
+        title: 'Vision 2',
         content: (
             <>
                 To be the prevailing centralized coordinating organization for
@@ -70,7 +70,7 @@ const stats = [
         ),
     },
     {
-        title: 'Mission',
+        title: 'Mission 2',
         content: (
             <>
                 To help our neighbors thrive by creating more equitable access
@@ -272,6 +272,7 @@ const Home = () => {
                                 px={6}
                                 colorScheme={'red'}
                                 bg={'#fbbf24'}
+                                _focus={{ outline: 'none' }}
                                 _hover={{ bg: '#fbbf24' }}
                             >
                                 Download
@@ -330,7 +331,7 @@ const Home = () => {
                         fontWeight={600}
                         fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
                     >
-                        Discalimer
+                        Disclaimer
                     </Heading>
                     <Text color={'gray.500'}>
                         The organization and its members, employees, volunteers
