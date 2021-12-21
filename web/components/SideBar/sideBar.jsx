@@ -13,10 +13,12 @@ import {
 } from '@chakra-ui/react';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
 import { FiHome, FiMenu } from 'react-icons/fi';
+import { MdLogout } from 'react-icons/md';
 
 const LinkItems = [
-    { name: 'Dashboard', icon: FiHome },
-    { name: 'Info', icon: BsFillInfoCircleFill },
+    { name: 'Dashboard', link: '/dashboard', icon: FiHome },
+    { name: 'Info', link: '/info', icon: BsFillInfoCircleFill },
+    { name: 'Logout', link: '/login', icon: MdLogout },
 ];
 
 const SideBar = ({ children }) => {
@@ -74,7 +76,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                 />
             </Flex>
             {LinkItems.map((link) => (
-                <NavItem key={link.name} icon={link.icon}>
+                <NavItem key={link.name} icon={link.icon} link={link.link}>
                     {link.name}
                 </NavItem>
             ))}
@@ -82,12 +84,12 @@ const SidebarContent = ({ onClose, ...rest }) => {
     );
 };
 
-const NavItem = ({ icon, children, ...rest }) => {
+const NavItem = ({ icon, link, children, ...rest }) => {
     return (
         <Link
             style={{ textDecoration: 'none' }}
             _focus={{ outline: 'none' }}
-            href={children.toString().toLowerCase()}
+            href={link}
         >
             <Flex
                 align="center"
