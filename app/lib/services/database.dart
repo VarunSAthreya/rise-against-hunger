@@ -1,7 +1,10 @@
-import 'package:cicadahack/models/survey.dart';
+import 'package:cicadahack/models/donate.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:uuid/uuid.dart';
 import 'package:uuid/uuid_util.dart';
+
+import '../models/survey.dart';
 
 class DatabaseService {
   DatabaseService._();
@@ -14,6 +17,9 @@ class DatabaseService {
 
   static final CollectionReference _surveysRef =
       FirebaseFirestore.instance.collection('survey');
+
+  static final CollectionReference _donateRef =
+      FirebaseFirestore.instance.collection('donate');
 
   static Future<void> addUser({
     required String id,
@@ -51,6 +57,21 @@ class DatabaseService {
         survey.location!.latitude,
         survey.location!.longitude,
       )
+    });
+  }
+
+  static Future<void> addDonate({required Donate donate}) async {
+    final String id = _uuid.v4();
+    await _donateRef.doc(id).set({
+      'id': id,
+      "name": donate.name,
+      "phnumber": donate.phnumber,
+      "location": GeoPoint(
+        donate.location!.latitude,
+        donate.location!.longitude,
+      ),
+      "user_id": FirebaseAuth.instance.currentUser!.uid,
+      "people": donate.people,
     });
   }
 }

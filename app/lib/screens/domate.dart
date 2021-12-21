@@ -1,19 +1,18 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:cicadahack/models/donate.dart';
+import 'package:cicadahack/widgets/survey_textfiled.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-import '../models/survey.dart';
-import '../widgets/survey_dropdown.dart';
-import '../widgets/survey_textfiled.dart';
 import 'maps.dart';
 
-class SurveyPage extends HookWidget {
-  static const routeName = '/survey';
-  const SurveyPage({Key? key}) : super(key: key);
+class DonatePage extends HookWidget {
+  static const routeName = '/donate';
+  const DonatePage({Key? key}) : super(key: key);
 
   Hero _title(BuildContext context) {
     return Hero(
-      tag: 'Survey',
+      tag: 'Donate',
       child: SizedBox(
         height: 50,
         child: DefaultTextStyle(
@@ -32,9 +31,9 @@ class SurveyPage extends HookWidget {
           child: AnimatedTextKit(
             repeatForever: true,
             animatedTexts: [
-              FlickerAnimatedText('Survey'),
-              FlickerAnimatedText('Survey'),
-              FlickerAnimatedText('Survey'),
+              FlickerAnimatedText('Donate'),
+              FlickerAnimatedText('Donate'),
+              FlickerAnimatedText('Donate'),
             ],
             onTap: () {
               debugPrint("Tap Event");
@@ -47,12 +46,9 @@ class SurveyPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _adults = useState<int>(0);
-    final _children = useState<int>(0);
-    final _male = useState<int>(0);
-    final _female = useState<int>(0);
-    final _food = useState<int>(0);
-    final _situation = useState<String>('Select Situation');
+    final _name = useState<String>('');
+    final _number = useState<String>('');
+    final _people = useState<int>(0);
 
     return Scaffold(
       body: GestureDetector(
@@ -78,45 +74,23 @@ class SurveyPage extends HookWidget {
                     children: [
                       _title(context),
                       SurveyTextField(
-                        labelText: 'Adilts',
-                        title: 'Enter Number of Adults: ',
-                        keyboardType: TextInputType.number,
-                        onChanged: (str) => _adults.value = int.parse(str),
+                        labelText: 'Name',
+                        title: 'Enter Name: ',
+                        onChanged: (str) => _name.value = str,
                       ),
                       const SizedBox(height: 20),
                       SurveyTextField(
-                        labelText: 'Children',
-                        title: 'Enter Number of Children: ',
+                        labelText: 'Phone Number',
+                        title: 'Enter Phone Number',
                         keyboardType: TextInputType.number,
-                        onChanged: (str) => _children.value = int.parse(str),
+                        onChanged: (str) => _number.value = str,
                       ),
                       const SizedBox(height: 20),
                       SurveyTextField(
-                        labelText: 'Male',
-                        title: 'Enter Number of Males: ',
+                        labelText: 'People',
+                        title: 'Enter Number of People you can feed',
                         keyboardType: TextInputType.number,
-                        onChanged: (str) => _male.value = int.parse(str),
-                      ),
-                      const SizedBox(height: 20),
-                      SurveyTextField(
-                        labelText: 'Female',
-                        title: 'Enter Number of Female: ',
-                        keyboardType: TextInputType.number,
-                        onChanged: (str) => _female.value = int.parse(str),
-                      ),
-                      const SizedBox(height: 20),
-                      SurveyTextField(
-                        labelText: 'Food',
-                        title: 'Enter Number of Food Packets: ',
-                        keyboardType: TextInputType.number,
-                        onChanged: (str) => _food.value = int.parse(str),
-                      ),
-                      const SizedBox(height: 20),
-                      SurveyDropDown(
-                        title: 'Situation',
-                        value: _situation.value,
-                        list: const ['Good', 'Normal', 'Severe'],
-                        onChanged: (str) => _situation.value = str,
+                        onChanged: (str) => _people.value = int.parse(str),
                       ),
                       const SizedBox(height: 20),
                       GestureDetector(
@@ -125,15 +99,12 @@ class SurveyPage extends HookWidget {
                             context,
                             MaterialPageRoute<MapsLocation>(
                               builder: (context) => MapsLocation(
-                                survey: Survey(
-                                  adult: _adults.value,
-                                  children: _children.value,
-                                  situation: _situation.value,
-                                  female: _female.value,
-                                  requiredFood: _food.value,
-                                  male: _male.value,
+                                donate: Donate(
+                                  people: _people.value,
+                                  name: _name.value,
+                                  phnumber: _number.value,
                                 ),
-                                isSurvey: true,
+                                isSurvey: false,
                               ),
                             ),
                           );

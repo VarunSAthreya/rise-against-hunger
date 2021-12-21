@@ -1,3 +1,4 @@
+import 'package:cicadahack/models/donate.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -9,9 +10,15 @@ import '../services/database.dart';
 import 'home.dart';
 
 class MapsLocation extends StatefulWidget {
-  static const routeName = '/map';
-  final Survey survey;
-  const MapsLocation({Key? key, required this.survey}) : super(key: key);
+  final Survey? survey;
+  final Donate? donate;
+  final bool isSurvey;
+  const MapsLocation({
+    Key? key,
+    this.survey,
+    this.donate,
+    required this.isSurvey,
+  }) : super(key: key);
 
   @override
   _MapsLocationState createState() => _MapsLocationState();
@@ -83,7 +90,7 @@ class _MapsLocationState extends State<MapsLocation> {
               onMapCreated: _onMapCreated,
               initialCameraPosition: CameraPosition(
                 target: _currentLatLng,
-                zoom: 11.0,
+                zoom: 35.0,
               ),
               markers: _createMarker(),
               onTap: (argument) => _updateMarker(argument),
@@ -101,9 +108,18 @@ class _MapsLocationState extends State<MapsLocation> {
               //       _currentLatLng.latitude, _currentLatLng.longitude);
               //   print(placemarks.toString());
               try {
-                widget.survey.location = _currentLatLng;
-                await DatabaseService.addSurvey(survey: widget.survey);
-                Navigator.pushReplacementNamed(context, Home.routeName);
+                if (widget.survey != null && widget.isSurvey) {
+                  widget.survey!.location = _currentLatLng;
+                  await DatabaseService.addSurvey(survey: widget.survey!);
+                  Navigator.pushReplacementNamed(context, Home.routeName);
+                } else if (widget.donate != null && !widget.isSurvey) {
+                  widget.donate!.location = _currentLatLng;
+                  await DatabaseService.addDonate(donate: widget.donate!);
+                  Navigator.pushReplacementNamed(context, Home.routeName);
+                }
+                setState(() {
+                  _isLoading = false;
+                });
               } catch (e) {
                 debugPrint(e.toString());
               }

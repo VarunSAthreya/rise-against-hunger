@@ -1,9 +1,10 @@
-import 'package:cicadahack/screens/survey.dart';
+import 'package:cicadahack/screens/domate.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:lottie/lottie.dart';
 
 import '../services/auth.dart';
+import 'survey.dart';
 
 class Home extends HookConsumerWidget {
   static const routeName = '/home';
@@ -45,7 +46,9 @@ class Home extends HookConsumerWidget {
                       Navigator.pushNamed(context, SurveyPage.routeName),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 57),
+                      vertical: 10,
+                      horizontal: 57,
+                    ),
                     decoration: BoxDecoration(
                       color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.circular(10),
@@ -65,20 +68,26 @@ class Home extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 20),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () =>
+                      Navigator.pushNamed(context, DonatePage.routeName),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 50),
+                      vertical: 10,
+                      horizontal: 55,
+                    ),
                     decoration: BoxDecoration(
                       color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text(
-                      'Requent',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold,
+                    child: Hero(
+                      tag: 'Donate',
+                      child: Text(
+                        'Donate',
+                        textScaleFactor: 1.5,
+                        style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

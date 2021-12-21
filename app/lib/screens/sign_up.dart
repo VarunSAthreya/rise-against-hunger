@@ -233,6 +233,10 @@ class SignUp extends HookConsumerWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 250,
+                      child: Lottie.asset('assets/lottie/cookingsafe.json'),
+                    ),
                     _greetings(),
                     const SizedBox(height: 20),
                     _inputForms(),
