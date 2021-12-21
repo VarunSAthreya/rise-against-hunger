@@ -47,37 +47,34 @@ const basicCardData = [
 
 const stats = [
     {
-        title: '10+',
+        title: 'Vision',
         content: (
             <>
-                Software modules for detailed monitoring and real-time analytics
+                We envision a community in which everyone has access to
+                sufficient nutritious food.
             </>
         ),
     },
     {
-        title: '24/7',
+        title: 'Mission',
+        content: <>To End Food Insecurity in All Forms in the World.</>,
+    },
+    {
+        title: 'Vision',
         content: (
             <>
-                Analytics enabled right in your dashboard without history
-                limitations
+                To be the prevailing centralized coordinating organization for
+                all food donations and to play a key role in the reduction of
+                food wastage and food insecurity.
             </>
         ),
     },
     {
-        title: '13%',
+        title: 'Mission',
         content: (
             <>
-                Farms in North America has chosen NewLife™ as their management
-                solution
-            </>
-        ),
-    },
-    {
-        title: '250M+',
-        content: (
-            <>
-                Plants currently connected and monitored by the NewLife™
-                software
+                To help our neighbors thrive by creating more equitable access
+                to food and opportunity through community partnerships.
             </>
         ),
     },
@@ -154,12 +151,12 @@ const Home = () => {
                 </SimpleGrid>
             </Box>
             {/*Mission*/}
-            <Box bg={'gray.800'} position={'relative'}>
+            <Box bg={'#ffbf24'} position={'relative'}>
                 <Container maxW={'7xl'} zIndex={10} position={'relative'}>
                     <Stack direction={{ base: 'column', lg: 'row' }}>
                         <Stack
                             flex={1}
-                            color={'gray.400'}
+                            color={'#000'}
                             justify={{ lg: 'center' }}
                             py={{ base: 4, md: 10, xl: 20 }}
                         >
@@ -171,9 +168,9 @@ const Home = () => {
                                     textTransform={'uppercase'}
                                     mb={3}
                                     fontSize={'xl'}
-                                    color={'gray.500'}
+                                    color={'#000'}
                                 >
-                                    Technology
+                                    Our Aspiration
                                 </Text>
                                 <Heading
                                     color={'white'}
@@ -181,18 +178,16 @@ const Home = () => {
                                     mb={5}
                                     fontSize={{ base: '3xl', md: '5xl' }}
                                 >
-                                    21st century agriculture
+                                    Mission & Vision
                                 </Heading>
                                 <Text
                                     fontSize={'xl'}
-                                    color={'gray.400'}
+                                    color={'#000'}
                                     textAlign={'center'}
                                 >
-                                    The NewLife™ technology allows you to
-                                    monitor your crops and get complete insights
-                                    at real time. The proprietary
-                                    software/hardware ecosystem prevents your
-                                    plants from getting neglected.
+                                    Every Organization as to have some mission
+                                    and Vision in order to succeed the goals and
+                                    Make the world a better place.
                                 </Text>
                             </Box>
 
@@ -210,10 +205,7 @@ const Home = () => {
                                         >
                                             {stat.title}
                                         </Text>
-                                        <Text
-                                            fontSize={'xl'}
-                                            color={'gray.400'}
-                                        >
+                                        <Text fontSize={'xl'} color={'#000'}>
                                             {stat.content}
                                         </Text>
                                     </Box>
@@ -247,22 +239,27 @@ const Home = () => {
                                     position: 'absolute',
                                     bottom: 1,
                                     left: 0,
-                                    bg: 'red.400',
+                                    bg: '#fbbf24',
                                     zIndex: -1,
                                 }}
                             >
-                                Write once,
+                                Want to now More
                             </Text>
                             <br />
-                            <Text as={'span'} color={'red.400'}>
-                                use everywhere!
+                            <Text as={'span'} color={'#fbbf24'}>
+                                check out! Our App
                             </Text>
                         </Heading>
                         <Text color={'gray.500'}>
-                            Snippy is a rich coding snippets app that lets you
-                            create your own code snippets, categorize them, and
-                            even sync them in the cloud so you can use them
-                            anywhere. All that is free!
+                            Food is always stored off the floor and away from
+                            walls and non-food items. Storage area, including
+                            the floor, pallets and shelves are cleaned
+                            regularly. Doors, windows and roofs of storage area
+                            are well sealed to prevent pest entry and a pest
+                            control program is organized at regular intervals.
+                            Our staffs and volunteers are oriented with personal
+                            hygiene and sanitation practices for maintaining
+                            hygiene standards in food handling.
                         </Text>
                         <Stack
                             spacing={{ base: 4, sm: 6 }}
@@ -274,18 +271,10 @@ const Home = () => {
                                 fontWeight={'normal'}
                                 px={6}
                                 colorScheme={'red'}
-                                bg={'red.400'}
-                                _hover={{ bg: 'red.500' }}
+                                bg={'#fbbf24'}
+                                _hover={{ bg: '#fbbf24' }}
                             >
-                                Get started
-                            </Button>
-                            <Button
-                                rounded={'full'}
-                                size={'lg'}
-                                fontWeight={'normal'}
-                                px={6}
-                            >
-                                How It Works
+                                Download
                             </Button>
                         </Stack>
                     </Stack>
@@ -344,17 +333,23 @@ const Home = () => {
                         Discalimer
                     </Heading>
                     <Text color={'gray.500'}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus ornare mollis leo, et gravida nulla. Aliquam sed
-                        ligula libero. Cras nec mi augue. Integer accumsan id
-                        eros commodo facilisis. Nam volutpat, orci in placerat
-                        scelerisque, nisi ipsum feugiat lacus, ac iaculis ex
-                        augue nec nisi. Pellentesque nisi sapien, laoreet vitae
-                        neque lacinia, semper aliquet neque. Curabitur vel mi ac
-                        felis suscipit maximus. Vivamus hendrerit nec sem eget
-                        accumsan. Integer finibus tempus sodales. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Donec sed
-                        elementum ex. Etiam rutrum ornare mauris vel tempus.
+                        The organization and its members, employees, volunteers
+                        or other representatives shall inspect and confirm that
+                        all donated food products received from respected
+                        partners are in good order and all of their affiliates
+                        and related entities and employees and officers make no
+                        representations, warranties or guaranties whatsoever
+                        with respect to the quality or hygiene of the donated
+                        food products. Once the donated food products are
+                        received by organization and its members, employees,
+                        volunteers or other representatives shall not be
+                        responsible for any adverse reactions, side effects,
+                        injury, bodily harm or death that results from
+                        consumption of the donated food products or any other
+                        liability arising thereof hereby releases and
+                        indemnifies and holds noone , harmless from and against
+                        all claims whatsoever organisation may have against
+                        anyone and all damage, loss, cost, expense or liability.
                     </Text>
                 </Stack>
             </Container>
