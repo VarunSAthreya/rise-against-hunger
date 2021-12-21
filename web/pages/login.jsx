@@ -62,10 +62,10 @@ const Login = () => {
                 email.current.value,
                 password.current.value
             );
-            router.push('/');
+            router.push('/dashboard');
         } else {
             await signIn(email.current.value, password.current.value);
-            router.push('/');
+            router.push('/dashboard');
         }
     };
     return (
