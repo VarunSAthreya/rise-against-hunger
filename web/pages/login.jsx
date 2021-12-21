@@ -13,9 +13,10 @@ import {
     useBreakpointValue,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Footer from '../components/Footer/Footer';
 import NavBar from '../components/NavBar/NavBar';
+import { signIn, signUp } from '../lib/auth';
 
 const avatars = [
     {
@@ -49,14 +50,23 @@ const Login = () => {
 
     const router = useRouter();
 
+    const email = useRef('');
+    const name = useRef('');
+    const password = useRef('');
+
     const handleSubmission = async () => {
-        // if (login) {
-        //     await signUp(name, email, password);
-        //     router.push('/');
-        // } else {
-        //     await signIn(email, password);
-        //     router.push('/');
-        // }
+        if (login) {
+            console.log(name.current.value);
+            await signUp(
+                name.current.value,
+                email.current.value,
+                password.current.value
+            );
+            router.push('/');
+        } else {
+            await signIn(email.current.value, password.current.value);
+            router.push('/');
+        }
     };
     return (
         <>
@@ -80,15 +90,15 @@ const Login = () => {
                                 lg: '6xl',
                             }}
                         >
-                            Senior web designers{' '}
+                            FTW{' '}
                             <Text
                                 as={'span'}
                                 bgGradient="linear(to-r, yellow.400,#ffb24f)"
                                 bgClip="text"
                             >
-                                &
+                                -
                             </Text>{' '}
-                            Full-Stack Developers
+                            Feeding the World
                         </Heading>
                         <Stack direction={'row'} spacing={4} align={'center'}>
                             <AvatarGroup>
@@ -196,6 +206,7 @@ const Login = () => {
                                 {login ? (
                                     <>
                                         <Input
+                                            ref={name}
                                             placeholder="Name"
                                             bg={'gray.100'}
                                             border={0}
@@ -205,6 +216,7 @@ const Login = () => {
                                             }}
                                         />
                                         <Input
+                                            ref={email}
                                             placeholder="Email"
                                             bg={'gray.100'}
                                             border={0}
@@ -214,7 +226,9 @@ const Login = () => {
                                             }}
                                         />
                                         <Input
+                                            ref={password}
                                             placeholder="Password"
+                                            type="password"
                                             bg={'gray.100'}
                                             border={0}
                                             color={'gray.500'}
@@ -226,6 +240,7 @@ const Login = () => {
                                 ) : (
                                     <>
                                         <Input
+                                            ref={email}
                                             placeholder="Email"
                                             bg={'gray.100'}
                                             border={0}
@@ -235,7 +250,9 @@ const Login = () => {
                                             }}
                                         />
                                         <Input
-                                            placeholder="password"
+                                            ref={password}
+                                            type="password"
+                                            placeholder="Password"
                                             bg={'gray.100'}
                                             border={0}
                                             color={'gray.500'}
@@ -260,7 +277,7 @@ const Login = () => {
                                 _focus={{ outline: 'none' }}
                                 onClick={handleSubmission}
                             >
-                                {login ? 'SIGN UP' : 'LOGIN'}
+                                {login ? 'SIGN UP' : 'LOG IN'}
                             </Button>
                             <Button
                                 fontFamily={'heading'}
@@ -276,7 +293,9 @@ const Login = () => {
                                 _focus={{ outline: 'none' }}
                                 onClick={switchLoginHandler}
                             >
-                                Dont Have account?
+                                {!login
+                                    ? 'Dont Have account?'
+                                    : 'Already Have an Account?'}
                             </Button>
                         </Box>
                     </Stack>

@@ -13,7 +13,6 @@ try {
         appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
         measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
     });
-    console.log(firebase.auth());
 } catch (err) {
     if (!/already exists/.test(err.message)) {
         console.log('Failed to initialize Firebase', err.stack);
