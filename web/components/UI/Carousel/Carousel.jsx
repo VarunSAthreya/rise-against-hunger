@@ -32,12 +32,12 @@ const Carousel = () => {
         {
             title: 'FEED THE WORLD',
             text: 'FEED THE WORLD is growing a global movement to end hunger by empowering communities, nourishing lives and responding to emergencies..',
-            image: 'https://i.guim.co.uk/img/media/2c6058092eb57d233db4675cfef1721913b6c40d/0_465_7360_4417/master/7360.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=008eb4f03e93a48ceb7a04e0e7f18be3',
+            image: 'https://static01.nyt.com/images/2011/09/18/books/review/18HARI/18HARI-articleLarge.jpg?quality=75&auto=webp&disable=upscale',
         },
         {
             title: 'FIGHT AGAINST HUNGER',
             text: 'Support our food bank to help the needy in the community',
-            image: 'https://media.nature.com/lw1024/magazine-assets/d41586-021-02331-x/d41586-021-02331-x_19590762.jpg',
+            image: 'https://miro.medium.com/max/1200/1*nbGhfrzP5fI-nWj3RAaWRA.jpeg',
         },
         {
             title: 'Donate for #ZeroHunger',
