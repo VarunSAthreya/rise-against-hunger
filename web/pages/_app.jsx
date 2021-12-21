@@ -6,7 +6,7 @@ const App = ({ Component, pageProps }) => {
     return (
         <>
             <Head>
-                <title>Feeding the world</title>
+                <title>Raise Against Hunger</title>
                 <meta
                     name="viewport"
                     content="minimum-scale=1, initial-scale=1, width=device-width"
