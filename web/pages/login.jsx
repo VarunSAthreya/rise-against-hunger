@@ -98,7 +98,7 @@ const Login = () => {
                             >
                                 -
                             </Text>{' '}
-                            Feeding the World
+                            Members Of Feeding the World
                         </Heading>
                         <Stack direction={'row'} spacing={4} align={'center'}>
                             <AvatarGroup>
