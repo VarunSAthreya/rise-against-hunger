@@ -8,6 +8,8 @@ const data = {
     datasets: [
         {
             label: 'People fed by us.',
+            borderWidth: 1,
+            backgroundColor: '#ffb24f',
             data: [12, 19, 3, 5, 2, 3],
         },
     ],

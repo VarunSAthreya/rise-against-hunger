@@ -69,7 +69,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                 justifyContent="space-between"
             >
                 <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-                    Logo
+                    <Logo />
                 </Text>
                 <CloseButton
                     display={{ base: 'flex', md: 'none' }}
