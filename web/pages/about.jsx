@@ -28,7 +28,7 @@ const testimonialCardData = [
     },
     {
         heading: 'Good Service',
-        review: 'The service provided by the doctors is very good and they have very good knowledge.',
+        review: 'The service provided by the the organization is very good.',
         name: 'Alec Buttons',
         designation: 'Lets Feed Organization Head',
         imageUrl:
@@ -36,7 +36,7 @@ const testimonialCardData = [
     },
     {
         heading: 'Friendly Nature',
-        review: 'The Doctors are very friendly and understand the problem very quickly.',
+        review: 'The volunteers are very friendly and have an helping nature',
         name: 'Kira Rhoades',
         designation: 'No Hungry Organization Head',
         imageUrl:

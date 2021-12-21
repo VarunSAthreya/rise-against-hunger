@@ -85,8 +85,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
 const NavItem = ({ icon, children, ...rest }) => {
     return (
         <Link
-            href={children.toString().toLowerCase()}
             style={{ textDecoration: 'none' }}
+            _focus={{ outline: 'none' }}
+            href={children.toString().toLowerCase()}
         >
             <Flex
                 align="center"

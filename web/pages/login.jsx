@@ -274,6 +274,7 @@ const Login = () => {
                                         'linear(to-r, yellow.400,#ffb24f)',
                                     boxShadow: 'xl',
                                 }}
+                                _focus={{ outline: 'none' }}
                                 onClick={handleSubmission}
                             >
                                 {login ? 'SIGN UP' : 'LOG IN'}
@@ -289,6 +290,7 @@ const Login = () => {
                                         'linear(to-r, yellow.400,#ffb24f)',
                                     boxShadow: 'xl',
                                 }}
+                                _focus={{ outline: 'none' }}
                                 onClick={switchLoginHandler}
                             >
                                 {!login
