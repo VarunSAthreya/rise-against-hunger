@@ -8,17 +8,13 @@ export async function signUp(name, email, password) {
         if (!response.user.emailVerified) {
             response.user.sendEmailVerification();
         }
-        firebase
-            .firestore()
-            .collection('participants')
-            .doc(response.user.uid)
-            .set({
-                id: response.user.uid,
-                challengesSolved: 0,
-                email: email,
-                name: name,
-                score: 0,
-            });
+        firebase.firestore().collection('users').doc(response.user.uid).set({
+            id: response.user.uid,
+            challengesSolved: 0,
+            email: email,
+            name: name,
+            score: 0,
+        });
     }
 }
 
