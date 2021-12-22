@@ -1,18 +1,17 @@
-import React from 'react';
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
     Box,
-    Flex,
     Button,
-    useDisclosure,
+    Flex,
+    HStack,
+    IconButton,
     Stack,
     useColorMode,
-    IconButton,
-    HStack,
+    useDisclosure,
 } from '@chakra-ui/react';
-import {} from '@chakra-ui/icons';
-import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import NavLink from './NavLink/NavLink';
+import React from 'react';
 import Logo from '../UI/Logo/Logo';
+import NavLink from './NavLink/NavLink';
 
 const NavBar = () => {
     const { colorMode, toggleColorMode } = useColorMode();

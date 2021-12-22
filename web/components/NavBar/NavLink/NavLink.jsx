@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from '@chakra-ui/react';
 
 const NavLink = ({ children }) => (
@@ -8,6 +7,7 @@ const NavLink = ({ children }) => (
         rounded={'md'}
         _hover={{ textDecoration: 'none', color: '#ffb24f' }}
         _focus={{ outline: 'none' }}
+        fontWeight={'bold'}
         sx={{
             position: 'relative',
             letterSpacing: '2px',
