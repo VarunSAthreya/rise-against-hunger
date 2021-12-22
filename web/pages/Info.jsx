@@ -11,25 +11,24 @@ import {
     Tr,
 } from '@chakra-ui/react';
 import React from 'react';
-import Geocode from 'react-geocode';
 import SideBar from '../components/SideBar/sideBar';
 import firebase from '../lib/firebase';
 
 const Info = ({ donate }) => {
-    const address = [];
-    Geocode.setApiKey(process.env.NEXT_PUBLIC_MAPS_API);
+    // const address = [];
+    // Geocode.setApiKey(process.env.NEXT_PUBLIC_MAPS_API);
 
-    donate.map((don) => {
-        Geocode.fromLatLng(don.location.latitude, don.location.longitude).then(
-            (response) => {
-                const address1 = response.results[0].formatted_address;
-                address.push(address1);
-            },
-            (error) => {
-                console.error(error);
-            }
-        );
-    });
+    // donate.map((don) => {
+    //     Geocode.fromLatLng(don.location.latitude, don.location.longitude).then(
+    //         (response) => {
+    //             const address1 = response.results[0].formatted_address;
+    //             address.push(address1);
+    //         },
+    //         (error) => {
+    //             console.error(error);
+    //         }
+    //     );
+    // });
 
     return (
         <Flex>

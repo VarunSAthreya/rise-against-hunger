@@ -13,8 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
 import { FiHome, FiMenu } from 'react-icons/fi';
-import Logo from '../UI/Logo/Logo';
 import { MdLogout } from 'react-icons/md';
+import Logo from '../UI/Logo/Logo';
 
 const LinkItems = [
     { name: 'Dashboard', link: '/dashboard', icon: FiHome },
