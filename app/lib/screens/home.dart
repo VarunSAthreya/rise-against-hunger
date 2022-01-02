@@ -34,7 +34,7 @@ class Home extends HookConsumerWidget {
               children: [
                 Lottie.asset('assets/lottie/survey.json'),
                 const Text(
-                  'Choose your deed',
+                  'Rise Against Hunger',
                   textScaleFactor: 2.5,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
