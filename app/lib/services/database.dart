@@ -72,6 +72,7 @@ class DatabaseService {
       ),
       "user_id": FirebaseAuth.instance.currentUser!.uid,
       "people": donate.people,
+      "timestamp": Timestamp.now(),
     });
   }
 }
