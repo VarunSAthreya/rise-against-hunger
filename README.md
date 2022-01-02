@@ -5,3 +5,16 @@ Rise against hunger is a software solution for solving one of the [17 UN sustain
 This comprises of a [web application](https://rise-against-hunger.vercel.app/) and a [mobile app](./app).
 
 This project was selected as winner in [Cicada](http://cicadaise.tech/) hackathon, conducted by [Atria Institute of Technology](https://atria.edu/home.php).
+
+## Tech stack
+
+- [NextJS](https://nextjs.org/)
+- [Flutter](https://flutter.dev/)
+- [Firebase](https://firebase.google.com/)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Dart](https://dart.dev/)
+
+### Prerequisites
+
+- [NodeJS](https://nodejs.org/)
+- [Flutter SDK](https://flutter.dev/docs/get-started/install/)
