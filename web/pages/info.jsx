@@ -10,6 +10,7 @@ import {
     Thead,
     Tr,
 } from '@chakra-ui/react';
+import { format } from 'date-fns';
 import React from 'react';
 import SideBar from '../components/SideBar/sideBar';
 import firebase from '../lib/firebase';
@@ -67,7 +68,13 @@ const Info = ({ donate }) => {
                                                     fontSize="sm"
                                                     color="gray"
                                                 >
-                                                    Apr 24, 2021 at 1:40pm
+                                                    {format(
+                                                        new Date(
+                                                            don.timestamp
+                                                                .seconds * 1000
+                                                        ),
+                                                        "MMM dd, yyyy 'at' h:mm a"
+                                                    )}
                                                 </Text>
                                             </Flex>
                                         </Flex>
