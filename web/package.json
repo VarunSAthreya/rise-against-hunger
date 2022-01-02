@@ -1,7 +1,7 @@
 {
-    "name": "CicadaHackathon",
+    "name": "rise-against-hunger",
     "version": "1.0.0",
-    "description": "",
+    "description": "Web app created for hackathon",
     "main": "index.js",
     "scripts": {
         "dev": "next dev",
