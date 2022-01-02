@@ -1,25 +1,25 @@
-import React, { useEffect } from 'react';
 import {
     Box,
-    Heading,
-    Stack,
-    Text,
-    SimpleGrid,
-    Flex,
-    Container,
     Button,
+    Container,
+    Flex,
+    Heading,
     IconButton,
     Image,
+    SimpleGrid,
+    Stack,
+    Text,
 } from '@chakra-ui/react';
-import { AiFillHeart, AiFillPhone } from 'react-icons/ai';
-import { ImLocation } from 'react-icons/im';
-import { FaTruckMoving } from 'react-icons/fa';
-import NavBar from '../components/NavBar/NavBar';
-import Carousel from '../components/UI/Carousel/Carousel';
-import Footer from '../components/Footer/Footer';
-import BasicCard from '../components/UI/Card/BasicCard';
 import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { AiFillHeart, AiFillPhone } from 'react-icons/ai';
+import { FaTruckMoving } from 'react-icons/fa';
+import { ImLocation } from 'react-icons/im';
 import { useInView } from 'react-intersection-observer';
+import Footer from '../components/Footer/Footer';
+import NavBar from '../components/NavBar/NavBar';
+import BasicCard from '../components/UI/Card/BasicCard';
+import Carousel from '../components/UI/Carousel/Carousel';
 
 const basicCardData = [
     {

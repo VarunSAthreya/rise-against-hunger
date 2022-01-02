@@ -9,9 +9,15 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
-import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
+import {
+    BsFacebook,
+    BsGithub,
+    BsInstagram,
+    BsLinkedin,
+    BsTwitter,
+    BsYoutube,
+} from 'react-icons/bs';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import SocialMedia from '../UI/Card/SocialMedia';
 import Logo from '../UI/Logo/Logo';
 

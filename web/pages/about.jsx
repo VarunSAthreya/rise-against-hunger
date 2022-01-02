@@ -10,11 +10,11 @@ import {
     Text,
 } from '@chakra-ui/react';
 import React from 'react';
-import { FaHandHoldingHeart, FaLaughBeam } from 'react-icons/fa';
 import { BsFillPeopleFill } from 'react-icons/bs';
+import { FaHandHoldingHeart, FaLaughBeam } from 'react-icons/fa';
 import { GiInjustice } from 'react-icons/gi';
-import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
+import NavBar from '../components/NavBar/NavBar';
 import TestimonialCard from '../components/UI/Card/TestimonialCard';
 
 const testimonialCardData = [

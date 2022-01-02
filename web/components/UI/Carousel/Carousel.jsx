@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
 import {
     Box,
+    Container,
+    Heading,
     IconButton,
     Stack,
-    Heading,
     Text,
-    Container,
 } from '@chakra-ui/react';
+import React, { useState } from 'react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Slider from 'react-slick';
 
