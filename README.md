@@ -13,8 +13,25 @@ This project was selected as winner in [Cicada](http://cicadaise.tech/) hackatho
 - [Firebase](https://firebase.google.com/)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Dart](https://dart.dev/)
+- [Google Maps API](https://developers.google.com/maps)
 
 ### Prerequisites
 
 - [NodeJS](https://nodejs.org/)
 - [Flutter SDK](https://flutter.dev/docs/get-started/install/)
+
+## Demo
+
+### App
+
+#### Survey Demo
+
+<img src="./app/assets/demo/survey.gif" alt="Survey Demo" height="70%" width="30%"/>
+
+#### Donate Demo
+
+<img src="./app/assets/demo/donate.gif" alt="Donate Demo" height="70%" width="30%"/>
+
+### Web
+
+The website is hosted [here](http://rise-against-hunger.vercel.app/) using [Vercel](https://vercel.com/).
