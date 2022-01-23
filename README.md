@@ -24,13 +24,9 @@ This project was selected as winner in [Cicada](http://cicadaise.tech/) hackatho
 
 ### App
 
-#### Survey Demo
+<img aign="left" src="./app/assets/demo/survey.gif" alt="Survey Demo" height="70%" width="30%"/>
 
-<img src="./app/assets/demo/survey.gif" alt="Survey Demo" height="70%" width="30%"/>
-
-#### Donate Demo
-
-<img src="./app/assets/demo/donate.gif" alt="Donate Demo" height="70%" width="30%"/>
+<img aign="right" src="./app/assets/demo/donate.gif" alt="Donate Demo" height="70%" width="30%"/>
 
 ### Web
 
