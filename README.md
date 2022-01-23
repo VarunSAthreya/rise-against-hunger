@@ -24,10 +24,12 @@ This project was selected as winner in [Cicada](http://cicadaise.tech/) hackatho
 
 ### App
 
-<img aign="left" src="./app/assets/demo/survey.gif" alt="Survey Demo" height="70%" width="30%"/>
-
-<img aign="right" src="./app/assets/demo/donate.gif" alt="Donate Demo" height="70%" width="30%"/>
-
+<p align="center">
+  <img aign="left" src="./app/assets/demo/survey.gif" alt="Survey Demo" height="70%" width="30%"/>
+  <span>____________________</span>
+  <img aign="right" src="./app/assets/demo/donate.gif" alt="Donate Demo" height="70%" width="30%"/>
+</p>
+  
 ### Web
 
 The website is hosted [here](http://rise-against-hunger.vercel.app/) using [Vercel](https://vercel.com/).
