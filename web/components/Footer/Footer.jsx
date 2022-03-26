@@ -135,6 +135,7 @@ const Footer = () => {
                                 _hover={{
                                     textDecoration: 'none',
                                 }}
+                                _focus={{ outline: 'none' }}
                             >
                                 +91 80 8751 1913
                             </Link>
@@ -155,6 +156,7 @@ const Footer = () => {
                                 _hover={{
                                     textDecoration: 'none',
                                 }}
+                                _focus={{ outline: 'none' }}
                             >
                                 EMail@gmail.com
                             </Link>
@@ -193,6 +195,7 @@ const Footer = () => {
                                 _hover={{
                                     textDecoration: 'none',
                                 }}
+                                _focus={{ outline: 'none' }}
                             >
                                 FaceBook
                             </Link>
@@ -217,6 +220,7 @@ const Footer = () => {
                                 _hover={{
                                     textDecoration: 'none',
                                 }}
+                                _focus={{ outline: 'none' }}
                             >
                                 Instagram
                             </Link>
@@ -237,6 +241,7 @@ const Footer = () => {
                                 _hover={{
                                     textDecoration: 'none',
                                 }}
+                                _focus={{ outline: 'none' }}
                             >
                                 Twitter
                             </Link>
@@ -257,6 +262,7 @@ const Footer = () => {
                                 _hover={{
                                     textDecoration: 'none',
                                 }}
+                                _focus={{ outline: 'none' }}
                             >
                                 Youtube
                             </Link>

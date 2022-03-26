@@ -3,7 +3,7 @@ import { Box, Image, Link } from '@chakra-ui/react';
 const Logo = () => {
     return (
         <Box>
-            <Link href="/">
+            <Link href="/" _focus={{ outline: 'none' }}>
                 <Image
                     src="/assests/images/logo.png"
                     alt="Logo"

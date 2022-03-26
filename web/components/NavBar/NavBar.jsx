@@ -55,7 +55,10 @@ const NavBar = () => {
                             {Links.map((link) => (
                                 <NavLink key={link}>{link}</NavLink>
                             ))}
-                            <Button onClick={toggleColorMode}>
+                            <Button
+                                onClick={toggleColorMode}
+                                _focus={{ outline: 'none' }}
+                            >
                                 {colorMode === 'light' ? (
                                     <MoonIcon />
                                 ) : (

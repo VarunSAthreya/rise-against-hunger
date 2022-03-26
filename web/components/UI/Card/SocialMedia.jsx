@@ -20,6 +20,7 @@ const SocialMedia = ({ data }) => {
                 _hover={{
                     textDecoration: 'none',
                 }}
+                _focus={{ outline: 'none' }}
             >
                 {text}
             </Link>

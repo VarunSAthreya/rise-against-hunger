@@ -124,7 +124,7 @@ const Home = () => {
                     variants={slideVariants}
                     textAlign={'center'}
                     spacing={{ base: 4 }}
-                    py={{ base: 20, md: 32 }}
+                    py={{ base: 20, md: 36 }}
                 >
                     <Heading
                         fontWeight={600}
@@ -160,6 +160,7 @@ const Home = () => {
                 maxW="6xl"
                 mx={'auto'}
                 textAlign={'center'}
+                my={5}
                 pt={5}
                 px={{ base: 2, sm: 12, md: 17 }}
             >
@@ -240,10 +241,15 @@ const Home = () => {
                                             fontSize={'3xl'}
                                             color={'white'}
                                             mb={3}
+                                            textAlign={'center'}
                                         >
                                             {stat.title}
                                         </Text>
-                                        <Text fontSize={'xl'} color={'#000'}>
+                                        <Text
+                                            fontSize={'xl'}
+                                            color={'#000'}
+                                            textAlign={'center'}
+                                        >
                                             {stat.content}
                                         </Text>
                                     </Box>

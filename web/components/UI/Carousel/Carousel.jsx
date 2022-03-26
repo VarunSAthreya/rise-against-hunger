@@ -32,22 +32,22 @@ const Carousel = () => {
         {
             title: 'FEED THE WORLD',
             text: 'FEED THE WORLD is growing a global movement to end hunger by empowering communities, nourishing lives and responding to emergencies..',
-            image: 'https://static01.nyt.com/images/2011/09/18/books/review/18HARI/18HARI-articleLarge.jpg?quality=75&auto=webp&disable=upscale',
+            image: 'https://miro.medium.com/max/1200/1*nbGhfrzP5fI-nWj3RAaWRA.jpeg',
         },
         {
             title: 'FIGHT AGAINST HUNGER',
             text: 'Support our food bank to help the needy in the community',
-            image: 'https://miro.medium.com/max/1200/1*nbGhfrzP5fI-nWj3RAaWRA.jpeg',
+            image: 'https://www.deccanherald.com/sites/dh/files/articleimages/2020/07/24/file76pdj37q7h4124n542bf-1595576932.jpg',
         },
         {
             title: 'Donate for #ZeroHunger',
             text: ' If you cant feed a hundred people, then feed just one',
-            image: 'https://static.mothership.sg/1/2021/11/food-bank.png',
+            image: 'https://www.freudenberg.com/fileadmin/images/responsibility/2020-09-08_Foodbank_Southafrica_01.jpg',
         },
     ];
 
     return (
-        <Box height={'600px'} width={'full'} overflow={'hidden'}>
+        <Box height={'675px'} width={'full'} overflow={'hidden'}>
             {/* CSS files for react-slick */}
             <link
                 rel="stylesheet"
@@ -70,6 +70,7 @@ const Carousel = () => {
                 transform={'translate(0%, -50%)'}
                 zIndex={2}
                 onClick={() => slider?.slickPrev()}
+                _focus={{ outline: 'none' }}
             >
                 <BiLeftArrowAlt size="40px" />
             </IconButton>
@@ -83,6 +84,7 @@ const Carousel = () => {
                 transform={'translate(0%, -50%)'}
                 zIndex={2}
                 onClick={() => slider?.slickNext()}
+                _focus={{ outline: 'none' }}
             >
                 <BiRightArrowAlt size="40px" />
             </IconButton>
@@ -91,7 +93,7 @@ const Carousel = () => {
                 {cards.map((card, index) => (
                     <Box
                         key={index}
-                        height={'7xl'}
+                        height={'auto'}
                         position="relative"
                         backgroundPosition="center"
                         backgroundRepeat="no-repeat"
@@ -102,7 +104,7 @@ const Carousel = () => {
                         <Container
                             size="container.lg"
                             maxW={'100ch'}
-                            height="600px"
+                            height="675px"
                             position="relative"
                         >
                             <Stack
@@ -119,6 +121,7 @@ const Carousel = () => {
                                         md: '4xl',
                                         lg: '5xl',
                                     }}
+                                    color="#ffbf24"
                                 >
                                     {card.title}
                                 </Heading>
