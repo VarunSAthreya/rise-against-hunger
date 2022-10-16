@@ -33,7 +33,7 @@ const NavLink = ({ children }) => {
             color={
                 router.asPath === `/${children.toLowerCase()}`
                     ? '#ffbf24'
-                    : useColorModeValue('black', 'white')
+                    : useColorModeValue('#1a202cf5', 'white')
             }
             href={children.toString().toLowerCase()}
         >

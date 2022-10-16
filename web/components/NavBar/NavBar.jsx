@@ -20,15 +20,7 @@ const NavBar = () => {
     const Links = ['About', 'Login'];
     return (
         <>
-            <Box
-                px={20}
-                py={12}
-                position={'absolute'}
-                top={0}
-                zIndex={20}
-                right={0}
-                left={0}
-            >
+            <Box px={10} py={2} pt={4}>
                 <Flex
                     h={16}
                     alignItems={'center'}

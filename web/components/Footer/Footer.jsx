@@ -72,31 +72,22 @@ const Footer = () => {
     ];
 
     return (
-        <Box
-            bg={useColorModeValue('gray.50', 'gray.900')}
-            color={useColorModeValue('gray.700', 'gray.200')}
-        >
-            <Container as={Stack} maxW={'6xl'} py={10}>
+        <Box color={useColorModeValue('gray.700', 'gray.200')}>
+            <Container as={Stack} maxW={'6xl'} py={8}>
                 <Box py={10}>
                     <Flex
                         align={'center'}
                         _before={{
                             content: '""',
                             borderBottom: '1px solid',
-                            borderColor: useColorModeValue(
-                                'gray.200',
-                                'gray.700'
-                            ),
+                            borderColor: '#ffbf24',
                             flexGrow: 1,
                             mr: 8,
                         }}
                         _after={{
                             content: '""',
                             borderBottom: '1px solid',
-                            borderColor: useColorModeValue(
-                                'gray.200',
-                                'gray.700'
-                            ),
+                            borderColor: '#ffbf24',
                             flexGrow: 1,
                             ml: 8,
                         }}
