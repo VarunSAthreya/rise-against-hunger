@@ -48,11 +48,12 @@ const About = () => {
     return (
         <>
             <NavBar />
-            <Container maxW={'7xl'} p="12">
+            <Container maxW={'7xl'} padding={0}>
                 <SimpleGrid
                     columns={{ base: 1, md: 2 }}
                     spacing={10}
-                    py={{ base: 20, md: 28 }}
+                    py={{ base: 20 }}
+                    px={12}
                 >
                     <Flex>
                         <Image
@@ -92,8 +93,13 @@ const About = () => {
                         </Text>
                     </Stack>
                 </SimpleGrid>
-                <Box p={4} spacing={8}>
-                    <Heading textAlign={'center'} mb={4}>
+                <Box py={4} px={12} spacing={8} backgroundColor={'#ffbf24'}>
+                    <Heading
+                        fontWeight={600}
+                        fontSize={{ base: '2xl', sm: '4xl' }}
+                        textAlign={'center'}
+                        color={'white'}
+                    >
                         Our Values
                     </Heading>
                     <SimpleGrid
@@ -107,9 +113,9 @@ const About = () => {
                                 h={16}
                                 align={'center'}
                                 justify={'center'}
-                                color={'white'}
+                                color={'#ffb24f'}
                                 rounded={'full'}
-                                bg={'#ffbf24'}
+                                bg={'white'}
                                 mb={1}
                             >
                                 <Icon as={FaHandHoldingHeart} w={10} h={10} />
@@ -129,9 +135,9 @@ const About = () => {
                                 h={16}
                                 align={'center'}
                                 justify={'center'}
-                                color={'white'}
+                                color={'#ffb24f'}
                                 rounded={'full'}
-                                bg={'#ffb24f'}
+                                bg={'white'}
                                 mb={1}
                             >
                                 <Icon as={GiInjustice} w={10} h={10} />
@@ -150,9 +156,9 @@ const About = () => {
                                 h={16}
                                 align={'center'}
                                 justify={'center'}
-                                color={'white'}
+                                color={'#ffb24f'}
                                 rounded={'full'}
-                                bg={'#ffb24f'}
+                                bg={'white'}
                                 mb={1}
                             >
                                 <Icon as={BsFillPeopleFill} w={10} h={10} />
@@ -171,9 +177,9 @@ const About = () => {
                                 h={16}
                                 align={'center'}
                                 justify={'center'}
-                                color={'white'}
+                                color={'#ffb24f'}
                                 rounded={'full'}
-                                bg={'#ffb24f'}
+                                bg={'white'}
                                 mb={1}
                             >
                                 <Icon as={FaLaughBeam} w={10} h={10} />
@@ -188,7 +194,7 @@ const About = () => {
                         </Stack>
                     </SimpleGrid>
                 </Box>
-                <Stack spacing={6} align={'center'} py={{ base: 20 }}>
+                <Stack spacing={6} align={'center'} py={12} px={12}>
                     <Heading>What Our Clients Say</Heading>
                     <Text color={'gray.500'}>
                         We have been working with other non-profitable

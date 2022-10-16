@@ -77,8 +77,8 @@ const Login = () => {
                     maxW={'7xl'}
                     columns={{ base: 1, md: 2 }}
                     spacing={{ base: 10, lg: 32 }}
-                    px={{ base: 10, sm: 15 }}
-                    py={{ base: 10, sm: 20, lg: 48 }}
+                    px={{ base: 10, sm: 20 }}
+                    py={{ base: 10, sm: 20 }}
                 >
                     <Stack spacing={{ base: 10, md: 20 }}>
                         <Heading
