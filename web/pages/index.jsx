@@ -9,6 +9,7 @@ import {
     SimpleGrid,
     Stack,
     Text,
+    Divider,
 } from '@chakra-ui/react';
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
@@ -110,6 +111,7 @@ const Home = () => {
             controls.start('visible');
         }
     }, [controls, inView]);
+
     return (
         <>
             <NavBar />
@@ -124,11 +126,13 @@ const Home = () => {
                     variants={slideVariants}
                     textAlign={'center'}
                     spacing={{ base: 4 }}
-                    py={{ base: 20, md: 36 }}
+                    py={{ base: 20 }}
                 >
                     <Heading
                         fontWeight={600}
+                        textAlign={'center'}
                         fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+                        color={'#ffbf24'}
                     >
                         Welcome
                     </Heading>
@@ -150,6 +154,7 @@ const Home = () => {
                     </Text>
                 </MotionStack>
             </Container>
+            <Divider height={'3px'} bg={'#ffbf24'} />
             {/*Why Choose Us*/}
             <MotionStack
                 as={Box}
@@ -169,6 +174,7 @@ const Home = () => {
                     fontSize={'4xl'}
                     py={10}
                     fontWeight={'bold'}
+                    color={'#ffbf24'}
                 >
                     Why Choose Our Service ?
                 </Heading>
@@ -221,7 +227,7 @@ const Home = () => {
                                 </Heading>
                                 <Text
                                     fontSize={'xl'}
-                                    color={'#000'}
+                                    color={'#555f6d'}
                                     textAlign={'center'}
                                 >
                                     Every Organization as to have some mission
@@ -247,7 +253,7 @@ const Home = () => {
                                         </Text>
                                         <Text
                                             fontSize={'xl'}
-                                            color={'#000'}
+                                            color={'#555f6d'}
                                             textAlign={'center'}
                                         >
                                             {stat.content}
@@ -363,6 +369,7 @@ const Home = () => {
                     </Flex>
                 </Stack>
             </Container>
+            <Divider height={'3px'} bg={'#ffbf24'} />
             {/*Disclaimer*/}
             <Container maxW={'7xl'}>
                 <Stack
@@ -374,6 +381,7 @@ const Home = () => {
                     <Heading
                         fontWeight={600}
                         fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+                        color={'#ffbf24'}
                     >
                         Disclaimer
                     </Heading>
@@ -398,6 +406,7 @@ const Home = () => {
                     </Text>
                 </Stack>
             </Container>
+            <Divider height={'3px'} bg={'#ffbf24'} />
             <Footer />
         </>
     );

@@ -5,6 +5,7 @@ import {
     IconButton,
     Stack,
     Text,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
@@ -16,7 +17,7 @@ const settings = {
     fade: true,
     infinite: true,
     autoplay: true,
-    speed: 500,
+    speed: 600,
     autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -30,19 +31,25 @@ const Carousel = () => {
 
     const cards = [
         {
-            title: 'FEED THE WORLD',
-            text: 'FEED THE WORLD is growing a global movement to end hunger by empowering communities, nourishing lives and responding to emergencies..',
-            image: 'https://miro.medium.com/max/1200/1*nbGhfrzP5fI-nWj3RAaWRA.jpeg',
+            title: 'RISE AGAINST HUNGER',
+            text: 'Hunger is actually the worst weapon of mass destruction. It claims millions of victims each year.',
+            secondaryText:
+                'Support our food bank to help the needy in the community',
+            image: '/assests/images/carousel-1.jpg',
         },
         {
-            title: 'FIGHT AGAINST HUNGER',
-            text: 'Support our food bank to help the needy in the community',
-            image: 'https://www.deccanherald.com/sites/dh/files/articleimages/2020/07/24/file76pdj37q7h4124n542bf-1595576932.jpg',
+            title: 'DONATE FOR HUNGER',
+            text: 'One of the greatest feelings in the world is knowing that we as individuals can make a difference.',
+            secondaryText:
+                'Ending hunger in World is a goal that is literally within our grasp',
+            image: '/assests/images/carousel-2.jpg',
         },
         {
-            title: 'Donate for #ZeroHunger',
-            text: ' If you cant feed a hundred people, then feed just one',
-            image: 'https://www.freudenberg.com/fileadmin/images/responsibility/2020-09-08_Foodbank_Southafrica_01.jpg',
+            title: 'LETS FEED THE WORLD',
+            text: 'FEED THE WORLD is growing a global movement to end hunger by empowering communities',
+            secondaryText:
+                'For nourishing lives and responding to emergencies..',
+            image: '/assests/images/carousel-3.jpg',
         },
     ];
 
@@ -66,9 +73,10 @@ const Carousel = () => {
                 variant="ghost"
                 position="absolute"
                 left={50}
-                top={275}
+                top={395}
                 transform={'translate(0%, -50%)'}
                 zIndex={2}
+                backgroundColor={useColorModeValue('white', '#1a202cf5')}
                 onClick={() => slider?.slickPrev()}
                 _focus={{ outline: 'none' }}
             >
@@ -80,9 +88,10 @@ const Carousel = () => {
                 variant="ghost"
                 position="absolute"
                 right={50}
-                top={275}
+                top={395}
                 transform={'translate(0%, -50%)'}
                 zIndex={2}
+                backgroundColor={useColorModeValue('white', '#1a202cf5')}
                 onClick={() => slider?.slickNext()}
                 _focus={{ outline: 'none' }}
             >
@@ -98,39 +107,62 @@ const Carousel = () => {
                         backgroundPosition="center"
                         backgroundRepeat="no-repeat"
                         backgroundSize="cover"
-                        backgroundImage={`url(${card.image})`}
+                        backgroundImage={`${card.image}`}
                     >
                         {/* This is the block you need to change, to customize the caption */}
                         <Container
                             size="container.lg"
-                            maxW={'100ch'}
+                            maxW={'110ch'}
                             height="675px"
                             position="relative"
+                            display={'flex'}
+                            justifyContent={'center'}
                         >
                             <Stack
                                 spacing={6}
-                                w={'full'}
-                                maxW={'lg'}
+                                alignItems={'center'}
                                 position="absolute"
-                                top="50%"
-                                transform="translate(0, -50%)"
+                                top="28%"
+                                backgroundColor={useColorModeValue(
+                                    'white',
+                                    '#1a202cf5'
+                                )}
+                                padding={{
+                                    base: '0px',
+                                    md: '25px',
+                                    lg: '50px',
+                                }}
                             >
                                 <Heading
                                     fontSize={{
                                         base: '3xl',
-                                        md: '4xl',
-                                        lg: '5xl',
+                                        md: '5xl',
+                                        lg: '7xl',
                                     }}
                                     color="#ffbf24"
                                 >
                                     {card.title}
                                 </Heading>
-                                <Text
-                                    fontSize={{ base: 'md', lg: 'lg' }}
-                                    color="white"
-                                >
-                                    {card.text}
-                                </Text>
+                                <Box textAlign={'center'}>
+                                    <Text
+                                        fontSize={{ base: 'md', lg: 'lg' }}
+                                        color={useColorModeValue(
+                                            '#1a202cf5',
+                                            'white'
+                                        )}
+                                    >
+                                        {card.text}
+                                    </Text>
+                                    <Text
+                                        fontSize={{ base: 'md', lg: 'lg' }}
+                                        color={useColorModeValue(
+                                            '#1a202cf5',
+                                            'white'
+                                        )}
+                                    >
+                                        {card.secondaryText}
+                                    </Text>
+                                </Box>
                             </Stack>
                         </Container>
                     </Box>

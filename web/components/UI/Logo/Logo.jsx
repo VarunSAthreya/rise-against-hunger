@@ -7,7 +7,7 @@ const Logo = () => {
                 <Image
                     src="/assests/images/logo.png"
                     alt="Logo"
-                    maxW={'80px'}
+                    maxW={'65px'}
                     h={'auto'}
                     borderRadius={'50%'}
                     _focus={{ outline: 'none' }}
