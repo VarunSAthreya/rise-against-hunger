@@ -1,8 +1,9 @@
 # Rise against hunger
 
-Rise against hunger is a software solution for solving one of the [17 UN sustainable development goals](https://sdgs.un.org/goals) which is [Zero Hunger](https://sdgs.un.org/goals/goal2).
+Rise Against Hungeris an web and mobile app that helps to combat hunger. It provides a forum to donate food and to take surveys for
+hunger hot-spots. The web portal also has an admin panel to look at each and every detail about the fourm.
 
-This comprises of a [Web Application](https://rise-against-hunger.vercel.app/) and a [Mobile App](https://github.com/VarunSAthreya/rise-against-hunger/releases/download/release/rise-against-hunger.apk).
+This platfrom is created for solving one of the [17 UN sustainable development goals](https://sdgs.un.org/goals) which is [Zero Hunger](https://sdgs.un.org/goals/goal2), and comprises of a [Web](https://rise-against-hunger.vercel.app/) and a [Mobile App](https://github.com/VarunSAthreya/rise-against-hunger/releases/download/release/rise-against-hunger.apk).
 
 This project was selected as winner in [Cicada](http://cicadaise.tech/) hackathon, conducted by [Atria Institute of Technology](https://atria.edu/home.php).
 
