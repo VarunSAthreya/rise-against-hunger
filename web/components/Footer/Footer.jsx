@@ -46,30 +46,6 @@ const Footer = () => {
             text: 'LinkedIn',
         },
     ];
-    const sagar = [
-        {
-            icon: BsGithub,
-            url: 'https://github.com/Sandeep-M23',
-            text: 'GitHub',
-        },
-        {
-            icon: BsLinkedin,
-            url: 'https://www.linkedin.com/in/sandeep-m-4a599a1a4/',
-            text: 'LinkedIn',
-        },
-    ];
-    const shithin = [
-        {
-            icon: BsGithub,
-            url: 'https://github.com/Sandeep-M23',
-            text: 'GitHub',
-        },
-        {
-            icon: BsLinkedin,
-            url: 'https://www.linkedin.com/in/sandeep-m-4a599a1a4/',
-            text: 'LinkedIn',
-        },
-    ];
 
     return (
         <Box color={useColorModeValue('gray.700', 'gray.200')}>
@@ -277,22 +253,6 @@ const Footer = () => {
                                     Sandeep M
                                 </Text>
                                 {sandeep.map((data, index) => (
-                                    <SocialMedia data={data} key={index} />
-                                ))}
-                            </Box>
-                            <Box>
-                                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
-                                    Sagar D
-                                </Text>
-                                {sagar.map((data, index) => (
-                                    <SocialMedia data={data} key={index} />
-                                ))}
-                            </Box>
-                            <Box>
-                                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
-                                    Shithin Shetty
-                                </Text>
-                                {shithin.map((data, index) => (
                                     <SocialMedia data={data} key={index} />
                                 ))}
                             </Box>
