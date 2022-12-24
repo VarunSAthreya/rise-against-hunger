@@ -1,6 +1,28 @@
 /* eslint-disable no-unused-vars */
+import {
+    BarElement,
+    CategoryScale,
+    Chart as ChartJS,
+    Legend,
+    LinearScale,
+    LineElement,
+    PointElement,
+    Title,
+    Tooltip,
+} from 'chart.js';
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    LineElement,
+    Tooltip,
+    Legend,
+    PointElement
+);
 
 const data = {
     labels: ['Adults', 'Children', 'Male', 'Female'],
